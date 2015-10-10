@@ -1,0 +1,15 @@
+# The humans responsible & colophon
+# humanstxt.org
+
+# TEAM
+	Web Designer & Developer: Rob Simpson
+	Site: http://robsimpson.me
+	Twitter: @robcsimps
+	Dribbble: https://dribbble.com/robsimpson
+	Location: Oxfordshire, UK
+
+# SITE
+	Version: 1.0.0
+	Site Url: http://robsimpson.me
+	Language: English
+	Technology: Bower, Grunt, JavaScript, SASS
