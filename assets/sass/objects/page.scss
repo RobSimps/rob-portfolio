@@ -19,3 +19,15 @@ html {
 	flex: 1 1 auto;
 	width: 100%;
 }
+
+// @include respond-max( $mq-large ) {
+// 	.o-page__heading--center-content {
+// 		display: none;
+// 	}
+// }
+
+// @include respond-min( $mq-large ) {
+// 	.o-page__heading--center-content {
+// 		text-align: center;
+// 	}
+// }

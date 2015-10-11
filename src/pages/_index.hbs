@@ -1,0 +1,63 @@
+---
+title: Home Page
+pageClass: s-home
+---
+<header class="c-hero js-hero">
+	<div class="o-section o-wrap o-wrap--x-large c-hero__row">
+		<div class="c-hero__content">
+			<h1 class="u-tera">We <span class="u-light-text">design</span> &amp; <span class="u-light-text">build</span> websites</h1>
+
+			<div class="s-free-content">
+				<p>We’re Rob and Kev – a team of freelance creatives based in the UK. We specialise in creating performant, responsive websites, but we do a few other things too.</p>
+			</div>
+			
+			<div class="c-hero__content__footer">
+				<a href="#" class="c-button c-button--primary">view <span class="u-light-text">work</span></a>
+			</div>
+		</div>
+
+		<figure class="c-hero__figure">
+			
+		</figure>
+		
+		<button class="c-hero__scroll-btn" data-module="ScrollTo" data-scroll-to="js-page-content" data-hide="js-hero">v</button>
+	</div>
+</header>
+
+<main class="c-page__content js-page-content" role="main">
+	<header class="c-header">
+		<div class="o-wrap o-wrap--large">
+			<a href="#" class="c-header__logo">RS</a>
+			<button class="c-header__toggle-nav">=</button>
+
+			<nav class="c-nav">
+			
+			</nav>
+		</div>
+	</header>
+
+	<div class="o-wrap o-wrap--large o-page__heading--center-content">
+		<h2>Our latest and greatest</h2>
+		<p class="u-intro">A small show case of our most recent and best work.</p>
+	</div>
+	
+	<section class="o-section o-wrap o-wrap--x-large" data-module="Inview">
+		<div class="c-case-study-card-row">
+			<div class="c-case-study-card-col">
+				{{>card card.geckotree}}
+			</div>
+			
+			<div class="c-case-study-card-col">
+				{{>card card.adspy}}
+			</div>
+
+			<div class="c-case-study-card-col">
+				{{>card card.abagri}}
+			</div>
+			
+			<div class="c-case-study-card-col">
+				{{>card card.hmv}}
+			</div>
+		</div>
+	</section>
+</main>

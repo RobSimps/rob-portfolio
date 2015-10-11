@@ -5,10 +5,10 @@ module.exports = {
 			'<%= assetsFolder %>/sass/**/**/*.scss'
 		],
 		tasks: [
-			'newer:sass',
-			'newer:autoprefixer',
-			'newer:stripmq',
-			'newer:pixrem'
+			'sass',
+			'autoprefixer',
+			'stripmq',
+			'pixrem'
 		]
 	},
 	js: {
@@ -16,24 +16,27 @@ module.exports = {
 			'<%= assetsFolder %>/js/**/*.js'
 		],
 		tasks: [
-			'newer:jshint',
-			'newer:concat'
+			'jshint',
+			'concat'
 		]
 	},
-	html: {
+	// html: {
+	// 	files: [
+	// 		'*.html',
+	// 	],
+	// 	tasks: [
+	// 		'replace'
+	// 	]
+	// },
+
+	site: {
 		files: [
-			'src/*.html.src',
+			'<%= siteFolder %>/**/**/*.hbs',
+			'<%= siteFolder %>/**/**/*.json'
 		],
 		tasks: [
-			'replace'
+			'assemble:site'
 		]
-	},
-	styleguide: {
-		files: [
-			'<%= styleguideFolder %>/src/**/*.hbs',
-			'<%= styleguideFolder %>/**/*.json'
-		],
-		tasks: [ 'assemble:styleguide' ]
 	},
 	todo: {
 		files: [

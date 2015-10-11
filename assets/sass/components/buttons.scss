@@ -5,17 +5,19 @@
 =========================================================== */
 
 .c-button {
-	border-radius: $border-radius;
+	border-radius: $border-radius * 100;
 	display: inline-block;
+	font-weight: $bold;
 	line-height: 1;
-	padding: 1.5rem 2rem;
+	padding: 1.5rem 2rem; // 2rem 3rem
 	transition: background $speed ease,
+				border-color $speed ease,
+				box-shadow $speed ease,
 				color $speed ease,
 				transform $speed ease;
 
-	&:hover,
 	&:focus {
-		color: $white;
+		box-shadow: 0 .3rem 0 0 rgba( $black, .1 );
 	}
 
 	&:active {
@@ -24,22 +26,25 @@
 }
 
 .c-button--primary {
-	background: $pri;
-	color: $white;
-
-	&:hover,
-	&:focus {
-		background: $sec;
-	}
-}
-
-.c-button--secondary {
 	background: $sec;
 	color: $white;
 
 	&:hover,
 	&:focus {
-		background: $ter;
+		background: $pri;
+		color: $white;
+	}
+}
+
+.c-button--secondary {
+	border: $border-width solid $sec;
+	color: $sec;
+
+	&:hover,
+	&:focus {
+		background: $pri;
+		border-color: $pri;
+		color: $white;
 	}
 }
 
@@ -51,5 +56,11 @@
 	&:hover,
 	&:focus {
 		color: $black;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.c-button {
+		padding: 2rem 3rem;
 	}
 }

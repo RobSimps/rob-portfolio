@@ -4,6 +4,8 @@
 
 @import 'generic/reset.scss';
 
+@import 'animations/base.scss';
+
 @import 'base/text.scss',
 		'base/headings.scss',
 		'base/anchor.scss',
@@ -19,8 +21,10 @@
 		'objects/forms.scss',
 		'objects/media.scss';
 
-@import 'components/buttons.scss';
+@import 'components/buttons.scss',
+		'components/header.scss',
+		'components/hero.scss';
+
+@import 'components/case-studies/card.scss';
 
 @import 'trumps/overrides.scss';
-
-// @todo include print styles

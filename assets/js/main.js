@@ -22,7 +22,7 @@
 		for( i = 0; i < $nodes.length; i++ ) {
 			$node = $nodes[ i ];
 			moduleName = $node.getAttribute( 'data-module' );
-			new window[moduleName]( $node );
+			new window[ moduleName ]( $node );
 		}
 	}
-})();
+} )();

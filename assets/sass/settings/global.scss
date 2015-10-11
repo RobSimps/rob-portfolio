@@ -7,7 +7,7 @@
 $old-ie: 	false!default;
 $base-dir: 	'/assets';
 $fonts: 	'#{$base-dir}/fonts';
-$images: 	'#{$base-dir}/build/img';
+$images: 	'#{$base-dir}/img';
 
 
 /* ===========================================================
@@ -16,16 +16,24 @@ $images: 	'#{$base-dir}/build/img';
 
 =========================================================== */
 
-$white: 	#FFFFFF;
-$black: 	#000000;
-$red:		red;
-$green:		green;
-$grey:		#CCCCCC;
+$white: 			#FFFFFF;
+$black: 			#000000;
+$red:				red;
+$green:				green;
 
-$pri: 		#57B275;
-$sec: 		#F05D71;
-$ter: 		#F2D044;
+$light-1:			#F9FAFC;
+$dark-1:			#263238;
+$dark-2:			#546e7a;
 
+// $pri: 				#039BE5;
+// $sec: 				#FF5722;
+$pri:				#57B275;
+$sec:				#57b275;
+
+$geckotree-pri:		#57b275;
+$abagri-pri:		#FBB831;
+$adspy-pri:			#229ee0;
+$hmv-pri:			#ED0677;
 
 
 /* ===========================================================
@@ -34,40 +42,45 @@ $ter: 		#F2D044;
 
 =========================================================== */
 
-$font-family:			Arial, Helvetica, Geneva, sans-serif;
-$font-size-body-small:	1.8em;
-$font-size-body-large:	2em;
-$font-size--small:		1.6rem;
-$font-size--large:		2rem;
+$font-family:			'Proxima-Nova', Arial, Helvetica, Geneva, sans-serif;
+$font-family-alt:		'Brandon-Grotesque';
+$font-size-body-small:	2em;
+$font-size-body-large:	2.4em;
+$font-size--small:		2rem;
+$font-size--large:		2.4rem;
 $line-height:			1.4em;
-$type-scale--small:		1.100;
-$type-scale--medium:	1.150;
+$type-scale--small:		1.150;
+$type-scale--medium:	1.175;
 $type-scale--large:		1.200;
 
-$heading-colour:		$black;
-$text-colour:			$black;
-$background-colour:		$white;
-$border-colour:			$grey;
+$heading-colour:		$dark-1;
+$text-colour:			$dark-2;
+$background-colour:		$light-1;
+$border-colour:			$light-1;
 $link-colour:			$pri;
 $link-colour-hover:		$sec;
-$placeholder-colour:	$grey;
+$placeholder-colour:	$light-1;
 $highlight-colour:		lighten( $pri, 20 );
 
 $error:					$red;
 $success:				$green;
-$disabled:				$grey;
+$disabled:				$light-1;
 
-$padding--small:		4rem;
-$padding--medium:		6rem;
-$padding--large:		8rem;
+$padding-small:			4rem;
+$padding-medium:		6rem;
+$padding-large:			8rem;
 
-$border-width: 			.2rem;
+$border-width: 			.1rem;
 $border-radius: 		.4rem;
 $speed: 				.3s;
 
-$wrap--medium:			75rem;
-$wrap--large:			92rem;
-$wrap--x-large:			140rem;
+$light:					100;
+$regular:				400;
+$bold:					600;
+
+$wrap-medium:			75rem;
+$wrap-large:			108rem;
+$wrap-x-large:			140rem;
 
 $active-scale-small:	scale( .98 );
 $active-scale-medium:	scale( .95 );
@@ -81,7 +94,7 @@ $active-scale-medium:	scale( .95 );
 =========================================================== */
 
 $mq-small: 				500px;
-$mq-medium: 			800px;
+$mq-medium: 			768px;
 $mq-large: 				1000px;
 $mq-x-large: 			1280px;
 $mq-xx-large: 			1500px;

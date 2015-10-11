@@ -11,3 +11,7 @@
 .hide-text {
 	@include hide-text;
 }
+
+.u-light-text {
+	font-weight: $light;
+}

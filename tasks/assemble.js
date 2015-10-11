@@ -1,14 +1,14 @@
 'use strict';
 module.exports = {
-	styleguide: {
+	site: {
 		options: {
+			data: '<%= siteFolder %>/data/**/*.{json,yml}',
 			flatten: true,
-			data: '<%= styleguideFolder %>/**/*.{json,yml}',
-			layoutdir: '<%= styleguideFolder %>/src/layouts',
-			partials: [ '<%= styleguideFolder %>/src/components/**/*.hbs' ],
-			layout: 'default.hbs',
+			layoutdir: '<%= siteFolder %>/layouts',
+			layout: 'site.hbs',
+			partials: [ '<%= siteFolder %>/components/**/*.hbs' ]
 		},
-		src: '<%= styleguideFolder %>/src/pages/index.hbs',
-		dest: '<%= styleguideBuildFolder %>/'
-	}
+		src: '<%= siteFolder %>/pages/*.hbs',
+		dest: '.'
+	},
 };

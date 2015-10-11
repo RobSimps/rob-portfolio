@@ -17,8 +17,7 @@ module.exports = function( grunt ) {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
 		assetsBuildFolder: 'assets/build',
-		styleguideFolder: 'styleguide',
-		styleguideBuildFolder: 'styleguide/build'
+		siteFolder: 'src'
 	};
 
 	/*
@@ -38,11 +37,11 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'css:dev',
 		'js:dev',
-		'icons',
-		'styleguide',
+		'assemble',
+		// 'icons',
 		'todo',
 		'watch'
-	]);
+	] );
 
 	grunt.registerTask( 'build', [
 		'css:build',
@@ -50,9 +49,8 @@ module.exports = function( grunt ) {
 		'icons',
 		'critical',
 		'images',
-		'styleguide',
 		'todo'
-	]);
+	] );
 
 
 	grunt.registerTask( 'css:dev', [
@@ -60,42 +58,36 @@ module.exports = function( grunt ) {
 		'autoprefixer',
 		'stripmq',
 		'pixrem'
-	]);
+	] );
 
 	grunt.registerTask( 'css:build', [
 		'css:dev',
 		'css_mqpacker',
 		'cssmin'
-	]);
+	] );
 
 	grunt.registerTask( 'js:dev', [
 		'modernizr',
-		'jshint',
 		'concat',
+		'jshint',
 		'uglify:inline'
-	]);
+	] );
 
 	grunt.registerTask( 'js:build', [
 		'js:dev',
 		'uglify'
-	]);
+	] );
 
-	grunt.registerTask( 'icons', [
-		'svgstore',
-		'replace'
-	]);
+	// grunt.registerTask( 'icons', [
+	// 	'svgstore',
+	// 	'replace'
+	// ] );
 
-	grunt.registerTask( 'images', [
-		'svgmin:svgImages',
-		'svg2png',
-		'copy:brandIcons',
-		'copy:bitmapImages',
-		'imageoptim'
-	]);
-
-	grunt.registerTask( 'styleguide', [
-		'clean:styleguide',
-		'sass:styleguide',
-		'assemble:styleguide'
-	]);
+	// grunt.registerTask( 'images', [
+	// 	'svgmin:svgImages',
+	// 	'svg2png',
+	// 	'copy:brandIcons',
+	// 	'copy:bitmapImages',
+	// 	'imageoptim'
+	// ] );
 };

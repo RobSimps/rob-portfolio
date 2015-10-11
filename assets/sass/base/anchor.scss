@@ -4,16 +4,26 @@
 
 =========================================================== */
 
-a {
-	color: $link-colour;
-	transition: color $speed ease;
+//@todo move this out?
+.s-free-content {
+	a {
+		border-bottom: $border-width solid rgba( $pri, 0);
+		color: $link-colour;
+		padding-bottom: .4rem;
+		transition: border $speed ease,
+					color $speed ease,
+					padding $speed ease,
+					transform $speed ease;
 
-	&:hover,
-	&:focus {
-		color: $link-colour-hover;
-	}
+		&:hover,
+		&:focus {
+			border-bottom: $border-width solid $pri;
+			color: $link-colour-hover;
+			padding-bottom: 0;
+		}
 
-	&:active {
-		transform: $active-scale-medium;
+		&:active {
+			transform: $active-scale-medium;
+		}
 	}
 }
