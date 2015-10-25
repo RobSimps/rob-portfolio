@@ -1,0 +1,234 @@
+/* ===========================================================
+
+	# Case Study - Page Nav
+
+=========================================================== */
+
+.c-case-study__page-nav__sections {
+	counter-reset: section;
+	list-style: none;
+
+	li {
+		margin: 0;
+	}
+}
+
+.c-case-study__page-nav__section {
+	counter-increment: section;
+}
+
+.c-case-study__page-nav__link {
+	display: block;
+	font-weight: $bold;
+
+	// &:hover,
+	// &:focus {
+	// 	color: $med-1;
+	// }
+}
+
+.c-case-study__page-nav__link__label {
+	&:before {
+		content: counters( section, '.' ) '. ';
+		font-size: .75em;
+		opacity: .5;
+	}
+}
+
+.c-case-study__page-nav__sections__child {
+	margin: 0;
+}
+
+@include respond-max( $mq-large ) {
+	.c-case-study__page-nav {
+		padding: $padding-small / 2;
+	}
+
+	.c-case-study__page-nav__sections {
+		border-radius: $border-radius;
+		padding: $padding-small / 8 0;
+	}
+
+	.c-case-study__page-nav__link {
+		border-radius: $border-radius;
+		margin-bottom: $padding-small / 8;
+		padding: $padding-small / 8 $padding-small / 2;
+		transition: background $speed ease,
+					color $speed ease,
+					transform $speed ease;
+	}
+
+	.c-case-study__page-nav__sections__child {
+		padding: 0;
+	}
+
+	.c-case-study__page-nav__link__child {
+		padding-left: $padding-small;
+	}
+
+	.c-case-study__page-nav-button {
+		background: $white;
+		border-radius: $border-radius;
+		float: right;
+		height: 5rem;
+		width: 5rem;
+	}
+
+	.c-case-study__page-nav-button__dot {
+		background: $pri;
+		border-radius: 100%;
+		display: block;
+		height: $padding-small / 8;
+		margin: 0 auto;
+		width: $padding-small / 8;
+
+		& + & {
+			margin-top: $padding-small / 8;
+		}
+	}
+
+	.no-enhance {
+		.c-case-study__page-nav__link {
+			background: rgba( $pri, .1 );
+
+			&:hover,
+			&:focus {
+				background: rgba( $sec, .1 );
+			}
+		}
+
+		.c-case-study__page-nav-button {
+			display: none;
+		}
+	}
+
+	.enhance {
+		.c-case-study__page-nav {
+			background: $white;
+			border-radius: $border-radius;
+			bottom: $padding-small / 2;
+			padding: 0;
+			position: fixed;
+			right: $padding-small / 2;
+			transform: scale( 0 );
+			transform-origin: bottom right;
+			transition: transform $speed ease;
+			width: calc( 100% - 40px );
+			z-index: 20;
+
+			&.is-visible {
+				transform: scale( 1 );
+
+				.c-case-study__page-nav__link {
+					opacity: 1;
+				}
+			}
+		}
+
+		.c-case-study__page-nav__link {
+			opacity: 0;
+			transition: opacity $speed ease $speed / 2;
+		}
+
+		.c-case-study__page-nav-button {
+			bottom: $padding-small / 2;
+			position: fixed;
+			right: $padding-small / 2;
+			z-index: 20;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-case-study__content {
+		position: relative;
+	}
+
+	.c-case-study__page-nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 20;
+
+		&.is-fixed {
+			position: fixed;
+		}
+
+		&.is-bottom {
+			bottom: -$padding-large;
+			top: auto;
+		}
+	}
+
+	.c-case-study__page-nav__section {
+		@include clearfix;
+	}
+
+	.c-case-study__page-nav__link {
+		border-radius: $border-radius * 10 0 0 $border-radius * 10;
+		float: right;
+		padding: $padding-small / 16 $padding-small / 8 $padding-small / 16 $padding-small / 2.5;
+		transition: background $speed ease;
+
+		&:hover {
+			background: $background-colour;
+
+			.c-case-study__page-nav__link__dot {
+				transform: scale( 1.4 );
+			}
+
+			.c-case-study__page-nav__link__label {
+				opacity: 1;
+				transform: translateX( 0 );
+				visibility: visible;
+			}
+		}
+
+		&:active {
+			transform: scale( 1 );
+
+			.c-case-study__page-nav__link__dot {
+				transform: scale( 1.2 );
+			}
+		}
+	}
+
+	.c-case-study__page-nav__link__dot {
+		background: $med-1;
+		border-radius: 100%;
+		display: block;
+		float: right;
+		height: 1rem;
+		margin: .8rem 1rem;
+		transition: background $speed ease,
+					transform $speed ease;
+		width: 1rem;
+	}
+
+	.c-case-study__page-nav__link__label {
+		float: right;
+		transform: translateX( 1rem );
+		transition: opacity $speed ease,
+					transform $speed ease,
+					visibility $speed ease;
+		visibility: hidden;
+	}
+
+	.opacity {
+		.c-case-study__page-nav__link__label {
+			opacity: 0;
+		}
+	}
+
+	.no-js {
+		.c-case-study__page-nav {
+			top: $padding-small;
+		}
+	}
+}
+
+@include respond-min( $mq-xx-large ) {
+	.c-case-study__page-nav__link {
+		padding-right: $padding-small / 2;
+	}
+}

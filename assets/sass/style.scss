@@ -4,7 +4,8 @@
 
 @import 'generic/reset.scss';
 
-@import 'animations/base.scss';
+@import 'animations/base.scss',
+		'animations/nav.scss';
 
 @import 'base/text.scss',
 		'base/headings.scss',
@@ -12,19 +13,51 @@
 		'base/button.scss',
 		'base/lists.scss',
 		'base/table.scss',
-		'base/forms.scss';
+		'base/forms.scss',
+		'base/code.scss',
+		'base/figcaption.scss';
 
 @import 'objects/page.scss',
-		'objects/wrap.scss',
+		'objects/page/heading.scss';
+
+@import 'objects/wrap.scss',
 		'objects/section.scss',
 		'objects/table.scss',
 		'objects/forms.scss',
-		'objects/media.scss';
+		'objects/media.scss',
+		'objects/carousel.scss';
 
 @import 'components/buttons.scss',
 		'components/header.scss',
-		'components/hero.scss';
+		'components/nav.scss',
+		'components/footer.scss',
+		'components/listing.scss',
+		'components/listing-side-by-side.scss',
+		'components/article.scss',
+		'components/feat-media-grid.scss';
 
-@import 'components/case-studies/card.scss';
+@import 'components/case-studies/card.scss',
+		'components/case-studies/section/section.scss',
+		'components/case-studies/section/header.scss',
+		'components/case-studies/section/heading.scss',
+		'components/case-studies/section/figure.scss',
+		'components/case-studies/section/grid.scss',
+		'components/case-studies/section/feat-img.scss',
+		'components/case-studies/page-nav.scss',
+		'components/case-studies/colours.scss',
+		'components/case-studies/typography.scss';
 
-@import 'trumps/overrides.scss';
+@import 'components/case-studies/geckotree/card.scss';
+
+@import 'components/case-studies/adspy/card.scss',
+		'components/case-studies/adspy/base.scss',
+		'components/case-studies/adspy/page-heading.scss',
+		'components/case-studies/adspy/page-nav.scss',
+		'components/case-studies/adspy/style-tiles.scss',
+		'components/case-studies/adspy/logo.scss',
+		'components/case-studies/adspy/colours.scss',
+		'components/case-studies/adspy/feat-img.scss',
+		'components/case-studies/adspy/illustrations.scss';
+
+@import 'trumps/overrides.scss',
+		'trumps/free-content.scss';

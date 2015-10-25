@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# FORMS
+	# Forms
 
 =========================================================== */
 
@@ -8,14 +8,13 @@ input,
 select,
 textarea {
 	background: none;
-	border: $border-width solid $border-colour;
-	border-radius: $border-radius;
-	padding: 1rem 1.5rem;
+	border: none;
+	border-bottom: $border-width * 2 solid $border-colour;
 	transition: border $speed ease;
 	width: 100%;
 
 	&:focus {
-		border-color: $pri;
+		border-color: $sec;
 	}
 
 	.is-valid & {

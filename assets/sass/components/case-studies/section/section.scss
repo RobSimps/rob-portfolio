@@ -1,0 +1,15 @@
+/* ===========================================================
+
+	# Case Study - Section
+
+=========================================================== */
+
+.c-case-study__sections {
+	counter-reset: section;
+	overflow: hidden;
+}
+
+.c-case-study__section {
+	counter-increment: section;
+	margin: 0;
+}

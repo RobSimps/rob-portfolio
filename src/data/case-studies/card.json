@@ -2,33 +2,17 @@
 	"geckotree": {
 		"class": "geckotree",
 		"heading": "Geckotree",
-		"services": "Branding, Illustrations, Website, Email",
+		"services": "Branding, Illustration, Website, Email",
 		"description": "<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>",
-		"button": "case <span class='u-light-text'>study</span>",
+		"button": "case study",
 		"url": "geckotree.html"
 	},
 	"adspy": {
 		"class": "adspy",
 		"heading": "OnlineAdSpy",
-		"services": "Branding, Illustrations, Website",
+		"services": "Branding, Illustration, Website",
 		"description": "<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>",
-		"button": "case <span class='u-light-text'>study</span>",
+		"button": "case study",
 		"url": "adspy.html"
-	},
-	"abagri": {
-		"class": "abagri",
-		"heading": "Ab Agri",
-		"services": "Front-End Development",
-		"description": "<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>",
-		"button": "visit <span class='u-light-text'>site</span>",
-		"url": "geckotree.html"
-	},
-	"hmv": {
-		"class": "hmv",
-		"heading": "HMV",
-		"services": "Front-End Development",
-		"description": "<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>",
-		"button": "visit <span class='u-light-text'>site</span>",
-		"url": "geckotree.html"
 	}
 }

@@ -1,0 +1,6 @@
+<div class="o-section o-form__field">
+	<label class="o-label" for="{{for}}">{{{label}}} {{#if optional}}<span class="o-label__note">Optional</span>{{/if}}</label>
+	<input class="o-input u-mega" id="{{for}}" type="{{type}}" placeholder="{{placeholder}}">
+	<span class="o-validation">{{errorEmpty}}</span>
+	{{#if errorInvalid}}<span class="o-validation">{{errorInvalid}}</span>{{/if}}
+</div>

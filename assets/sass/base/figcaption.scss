@@ -1,0 +1,16 @@
+/* ===========================================================
+
+	# Figcaption
+
+=========================================================== */
+
+caption,
+figcaption {
+	color: $dark-3;
+	margin-top: $line-height / 2;
+	text-align: left;
+}
+
+caption {
+	caption-side: bottom;
+}

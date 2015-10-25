@@ -1,20 +1,25 @@
 <article class="c-case-study-card c-case-study-card--{{class}}">
 	<a href="{{url}}" class="c-case-study-card__link">
 		<header class="c-case-study-card__header">
-			<h3 class="c-case-study-card__heading">{{heading}}</h3>
+			<h2 class="c-case-study-card__heading">{{heading}}</h2>
 			<strong class="c-case-study-card__services">{{services}}</strong>
 
+			{{#if description}}
 			<div class="c-case-study-card__description">
 				{{{description}}}
 			</div>
+			{{/if}}
 		</header>
-
+		
+		{{#if button}}
 		<footer class="c-case-study-card__ctas">
-			<span class="c-button c-case-study-card__button">{{{button}}}
-				{{!-- <svg class="icon icon--arrow-right">
+			<span class="c-button c-case-study-card__button">
+				{{{button}}}
+				<svg class="u-icon u-icon--arrow-right">
 					<use xlink:href="#icon--arrow-right"></use>
-				</svg> --}}
+				</svg>
 			</span>
 		</footer>
+		{{/if}}
 	</a>
 </article>

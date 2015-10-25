@@ -1,0 +1,25 @@
+{
+	"page-heading": {
+		"two-col": true,
+		"heading": "Articles for <span class='u-word-wrap u-highlight-text'>front-end devs</span>",
+		"description": "<p>Articles on web performance, responsive web design and more</p>",
+		"image": "../assets/img/blog/article-listing.png",
+		"alt": ""
+	},
+	"cta": true,
+	"heading": "Looking for <span class='u-highlight-text'>more</span>?",
+	"button": "archive",
+	"social": [ {
+		"text": "Twitter",
+		"url": "https://twitter.com/geckotree",
+		"icon": "twitter"
+	}, {
+		"text": "Dribbble",
+		"url": "https://dribbble.com/geckotree",
+		"icon": "dribbble"
+	}, {
+		"text": "Instagram",
+		"url": "https://instagram.com/geckotree",
+		"icon": "instagram"
+	} ]
+}

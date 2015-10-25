@@ -1,0 +1,52 @@
+/* ===========================================================
+
+	# Footer
+
+=========================================================== */
+
+.c-footer {
+	text-align: center;
+}
+
+.c-footer__planner + .c-footer__social {
+	margin-top: $padding-medium;
+}
+
+.c-footer__social {
+	list-style: none;
+
+	.u-icon {
+		@include icon( rgba( $dark-3, .5 ), 3.2rem, 3.2rem );
+	}
+}
+
+.c-footer__social__item {
+	display: inline-block;
+	margin: 0 $padding-small / 2;
+}
+
+.c-footer__social__link {
+	display: block;
+
+	&:hover,
+	&:focus {
+		.u-icon--twitter {
+			fill: $twitter;
+		}
+
+		.u-icon--dribbble {
+			fill: $dribbble;
+		}
+
+		.u-icon--instagram {
+			fill: $instagram;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-footer__heading {
+		display: inline-block;
+		margin-right: 4rem;
+	}
+}

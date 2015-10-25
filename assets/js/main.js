@@ -8,12 +8,8 @@
 		var i;
 		var $node;
 		var moduleName;
-		var $html = document.querySelector( 'html' );
 		var $nodes = document.querySelectorAll( '[data-module]' );
 		var $fastclick = document.querySelectorAll( '[data-fastclick]' );
-
-		$html.classList.remove( 'no-enhance' );
-		$html.classList.add( 'enhance' );
 
 		for( i = 0; i < $fastclick.length; i++ ) {
 			FastClick.attach( $fastclick[ i ] );

@@ -1,0 +1,59 @@
+/* ===========================================================
+
+	# AdSpy - Page Heading
+
+=========================================================== */
+
+.s-case-study-adspy {
+	.o-page-heading {
+		background-color: $adspy-pri-light;
+		background-position: bottom;
+		background-repeat: repeat-x;
+
+		.no-svg & {
+			background-image: url( '#{$images}/case-studies/adspy/city-background.png' );
+		}
+
+		.svg & {
+			background-image: url( '#{$images}/case-studies/adspy/city-background.svg' );
+		}
+	}
+
+	.o-page-heading__heading {
+		padding-bottom: .2em;
+	}
+
+	.o-page-heading__meta {
+		display: block;
+		margin-bottom: $line-height;
+	}
+
+	.o-page-heading__figure {
+		padding-top: $padding-small;
+		text-align: center;
+
+		img {
+			margin-bottom: -$padding-medium;
+		}
+	}
+
+	.c-case-study__content {
+		padding-top: $padding-medium * 1.5;
+	}
+
+	@include respond-max( $mq-large ) {
+		.o-page-heading {
+			text-align: center;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.o-page-heading__figure {
+			padding-top: 0;
+
+			img {
+				width: 40rem;
+			}
+		}
+	}
+}

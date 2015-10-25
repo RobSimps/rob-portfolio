@@ -1,17 +1,48 @@
 /* ===========================================================
 
-  # OVERRIDES
+  # Overrides
 
 =========================================================== */
 
-.clearfix {
+.u-clearfix {
 	@include clearfix;
 }
 
-.hide-text {
+.u-hide-text {
 	@include hide-text;
+}
+
+.u-icons {
+	display: none;
+}
+
+.u-icon {
+	transition: fill $speed ease;
+}
+
+.u-center-content {
+	text-align: center;
 }
 
 .u-light-text {
 	font-weight: $light;
+}
+
+.u-highlight-text {
+	color: $pri;
+}
+
+.s-blog,
+.s-blog-article {
+	.c-footer {
+		.o-section {
+			padding-top: 0;
+		}
+	}
+}
+
+@include respond-max( $mq-small ) {
+	.u-hide-mobile {
+		display: none;
+	}
 }

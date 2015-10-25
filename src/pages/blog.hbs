@@ -1,0 +1,17 @@
+---
+title: Articles for front-end devs
+pageClass: s-blog
+nav: blog
+---
+
+{{>page-heading blog.page-heading}}
+
+<div class="o-section">
+	<section class="c-listing-wrap">
+		{{#each listing.articles}}
+			{{> listing}}
+		{{/each}}
+	</section>
+</div>
+
+{{>footer blog}}

@@ -1,0 +1,21 @@
+/* ===========================================================
+
+	# Article
+
+=========================================================== */
+
+.c-article__header {
+	padding-top: 9rem;
+}
+
+@include respond-min( 830px ) {
+	.c-article__header {
+		text-align: center;
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-article__header {
+		padding-top: $padding-large + 9rem;
+	}
+}

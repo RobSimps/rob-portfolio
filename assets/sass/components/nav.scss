@@ -1,0 +1,168 @@
+/* ===========================================================
+
+	# Nav
+
+=========================================================== */
+
+.c-nav__list {
+	list-style: none;
+}
+
+.c-nav__item {
+	font-weight: $bold;
+	margin: 0;
+}
+
+.c-nav__link {
+	color: $dark-3;
+	transition: color $speed ease,
+				transform $speed ease;
+
+	.u-icon {
+		@include icon( $med-1, 1.6rem, 1.6rem );
+	}
+
+	&:hover,
+	&:focus {
+		color: $heading-colour;
+
+		.u-icon {
+			fill: $sec;
+		}
+	}
+
+	&.is-active {
+		color: $heading-colour;
+
+		.u-icon {
+			fill: $pri;
+		}
+	}
+}
+
+.c-nav__link--button {
+	background: $pri;
+	border-radius: $border-radius * 10;
+	color: $white;
+	transition: background $speed ease,
+				transform $speed ease;
+
+	.u-icon {
+		fill: $white;
+	}
+
+	&:hover,
+	&:focus {
+		background: $sec;
+		color: $white;
+
+		.u-icon {
+			fill: $white;
+		}
+	}
+
+	&:active {
+		transform: $active-scale-small;
+	}
+}
+
+@include respond-max( $mq-small ) {
+	.c-nav__item {
+		padding: 0 $padding-small / 8;
+	}
+
+	.c-nav__link {
+		padding: $padding-small / 4 1.5rem;
+	}
+}
+
+@include respond-max( $mq-medium ) {
+	.c-nav__link {
+		.u-icon {
+			margin: .3rem 0;
+		}
+	}
+}
+
+@include respond-min-max( $mq-small, $mq-large ) {
+	.c-nav__item {
+		padding: 0 $padding-small / 2;
+	}
+
+	.c-nav__link {
+		padding: $padding-small / 4 $padding-small / 2;
+	}
+}
+
+@include respond-min-max( $mq-medium, $mq-large ) {
+	.c-nav__item {
+		.u-icon {
+			margin: .6rem 0;
+		}
+	}
+}
+
+@include respond-max( $mq-large ) {
+	.c-nav__link {
+		display: block;
+		text-align: left;
+
+		.u-icon {
+			float: right;
+		}
+	}
+
+	.enhance {
+		.c-nav {
+			animation-duration: $speed * 1.5;
+			animation-fill-mode: both;
+			// background: $background-colour; @todo add when toggle nav
+			display: block;
+			left: 0;
+			padding-bottom: $padding-small / 4;
+			padding-top: $padding-small / 4;
+			position: absolute;
+			top: 0;
+			transform: translateY( -100% );
+			transition: transform $speed ease;
+			width: 100%;
+			z-index: -1;
+
+			&.is-visible {
+				animation-name: navBounceInDown;
+			}
+
+			&.is-hidden {
+				animation-name: navBounceOutUp;
+			}
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-nav__item {
+		float: left;
+	}
+
+	.c-nav__menu {
+		padding-left: 4.8rem;
+		width: 100%;
+	}
+
+	.c-nav__list {
+		@include clearfix;
+
+		& > :first-child {
+			padding-left: $padding-small / 4;
+		}
+	}
+
+	.c-nav__item--align-right {
+		float: right;
+	}
+
+	.c-nav__link {
+		display: block;
+		padding: .9rem $padding-small / 2;
+	}
+}

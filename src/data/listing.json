@@ -1,0 +1,38 @@
+{
+	"articles": [ {
+		"heading": "Faster font loading with <span class='u-highlight-text'>font events</span>",
+		"description": "<p>Web fonts are great and make the web a more beautiful space; however, loading them can be slow, which results in an unwanted side effect: FOIT (Flash of Invisible Text).</p>",
+		"url": "article.html",
+		"date": "25<sup>th</sup> May 2015",
+		"metaDate": "2015-05-25",
+		"author": "Rob Simpson"
+	}, {
+		"heading": "Improving front-end <span class='u-highlight-text'>performance</span>",
+		"description": "<p>Last year I wrote a post, Need for Speed, where I shared my workflows and techniques along with the tools involved in the development of my site.</p>",
+		"url": "article.html",
+		"date": "24<sup>th</sup> May 2015",
+		"metaDate": "2015-05-24",
+		"author": "Rob Simpson"
+	}, {
+		"heading": "Responsible <span class='u-highlight-text'>social share links</span>",
+		"description": "<p>Social share scripts are convenient and easy to copy & paste but rely on JavaScript and add additional overhead to your site, which means more HTTP requests and slower load times.</p>",
+		"url": "article.html",
+		"date": "23<sup>rd</sup> May 2015",
+		"metaDate": "2015-05-23",
+		"author": "Kev Simpson"
+	}, {
+		"heading": "<span class='u-highlight-text'>Responsive typography</span> with Sass maps",
+		"description": "<p>Managing consistent, typographic rhythm isn’t easy, but when the type is responsive, it makes things even more difficult. Fortunately Sass maps can help make responsive typography much more manageable.</p>",
+		"url": "article.html",
+		"date": "22<sup>nd</sup> May 2015",
+		"metaDate": "2015-05-22",
+		"author": "Kev Simpson"
+	}, {
+		"heading": "Google's <span class='u-highlight-text'>mobile-friendly</span> search results update",
+		"description": "<p>Back in February 2015, Google announced that starting April 21 it would be expanding its use of mobile-friendliness as a ranking signal. Today is April 21.</p>",
+		"url": "article.html",
+		"date": "21<sup>st</sup> May 2015",
+		"metaDate": "2015-05-21",
+		"author": "Rob Simpson"
+	} ]
+}

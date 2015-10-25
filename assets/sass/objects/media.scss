@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# MEDIA
+	# Media
 
 =========================================================== */
 
@@ -10,7 +10,11 @@ img {
 }
 
 .o-media {
+	margin: $padding-small / 2 0;
+	position: relative;
+
 	img {
+		border-radius: $border-radius;
 		width: 100%;
 	}
 }
@@ -35,14 +39,19 @@ img {
 	}
 }
 
-.o-media--large {
-	margin: $padding-small 0;
-	position: relative;
+@include respond-min( $mq-small ) {
+	.o-media {
+		margin: $padding-medium / 2 0;
+	}
 }
 
 @include respond-min( $mq-medium ) {
-	.o-media--large {
-		margin: $padding-medium 0;
+	.o-media {
+		margin: $padding-large / 2 0;
+
+		img {
+			border-radius: $border-radius;
+		}
 	}
 
 	.o-media--left,

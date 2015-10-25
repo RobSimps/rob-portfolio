@@ -1,0 +1,31 @@
+/* ===========================================================
+
+	# AdSpy - Card
+
+=========================================================== */
+
+.c-case-study-card--adspy {
+	.c-case-study-card__link {
+		background-color: $adspy-pri-light;
+
+		&:hover {
+			background-color: rgba( $adspy-pri, .25 ); // @todo hex colour
+		}
+
+		.no-svg & {
+			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.png' );
+		}
+
+		.svg & {
+			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.svg' );
+		}
+	}
+
+	.c-case-study-card__services {
+		color: $adspy-pri;
+	}
+
+	.c-case-study-card__button {
+		background: $adspy-pri;
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"page-heading": {
+		"two-col": true,
+		"heading": "OnlineAdSpy",
+		"meta": "Branding, Illustration, Website",
+		"description": "<p>We’re Rob and Kev – a small team of freelance creatives based in the UK.</p>",
+		"image": "../assets/img/case-studies/adspy/ninja.svg"
+	},
+	"prev": {
+		"class": "geckotree",
+		"heading": "Geckotree",
+		"services": "Branding, Illustration, Website, Email",
+		"url": "geckotree.html"
+	}
+}

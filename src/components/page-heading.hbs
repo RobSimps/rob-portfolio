@@ -1,0 +1,32 @@
+{{#if one-col}}
+<header class="o-page-heading o-page-heading--center-content">
+	<div class="o-wrap o-wrap--large">
+		<div class="o-page-heading__content">
+			<h1 class="o-page-heading__heading">{{{heading}}}</h1>
+			
+			<div class="o-page-heading__description s-free-content u-intro">
+				{{{description}}}
+			</div>
+		</div>
+	</div>
+</header>
+{{/if}}
+
+{{#if two-col}}
+<header class="o-page-heading o-page-heading--two-col js-in-page-nav-hero">
+	<div class="o-page-heading__row o-wrap o-wrap--x-large">
+		<div class="o-page-heading__content">
+			<h1 class="o-page-heading__heading">{{{heading}}}</h1>
+			{{#if meta}}<strong class="o-page-heading__meta u-highlight-text u-intro">{{meta}}</strong>{{/if}}
+
+			<div class="o-page-heading__description u-intro">
+				{{{description}}}
+			</div>
+		</div>
+
+		<figure class="o-page-heading__figure">
+			<img src="{{image}}" alt="{{alt}}">
+		</figure>
+	</div>
+</header>
+{{/if}}

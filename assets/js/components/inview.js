@@ -3,22 +3,25 @@
 
 	function Inview( el ) {
 		this._$el = el;
+		this._pixelsInview = this._$el.getAttribute( 'data-pixels-inview' ) ? this._$el.getAttribute( 'data-pixels-inview' ) : 400;
 
 		this._classes = {
 			inviewClass: 'is-inview'
 		};
 
-		this._dataTop = el; //@todo pass through data-top position
-
-		this._attachScrollMonitor();
+		this._init();
 	}
 
 	Inview.prototype = {
+		_init: function() {
+			this._attachScrollMonitor();
+		},
+
 		_attachScrollMonitor: function() {
 			var _this = this;
-			var scrollMonitor = window.scrollMonitor; //@todo?
+			var scrollMonitor = window.scrollMonitor;
 			var watcher = new scrollMonitor.create( this._$el, {
-				top: -400
+				top: -_this._pixelsInview
 			} );
 
 			watcher.enterViewport( function() {

@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# FORMS
+	# Form
 
 =========================================================== */
 
@@ -20,6 +20,10 @@
 	appearance: none;
 }
 
+.o-input {
+	padding-bottom: 0;
+}
+
 .o-validation {
 	display: block;
 	margin-top: $line-height / 4;
@@ -36,6 +40,11 @@
 
 
 //= LABEL ====================================================
+
+.o-label,
+.o-fieldset__legend {
+	font-weight: $bold;
+}
 
 .o-label__note {
 	color: $border-colour;

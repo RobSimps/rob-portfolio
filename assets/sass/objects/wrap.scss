@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# WRAP
+	# Wrap
 
 =========================================================== */
 
@@ -19,6 +19,10 @@
 .o-wrap--center {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.o-wrap--small {
+	max-width: $wrap-small;
 }
 
 .o-wrap--medium {

@@ -1,0 +1,18 @@
+{
+	"cta": true,
+	"heading": "Ready? Tell us <span class='u-highlight-text'>your story</span>",
+	"button": "planner",
+	"social": [ {
+		"text": "Twitter",
+		"url": "https://twitter.com/geckotree",
+		"icon": "twitter"
+	}, {
+		"text": "Dribbble",
+		"url": "https://dribbble.com/geckotree",
+		"icon": "dribbble"
+	}, {
+		"text": "Instagram",
+		"url": "https://instagram.com/geckotree",
+		"icon": "instagram"
+	} ]
+}

@@ -1,0 +1,103 @@
+/* ===========================================================
+
+	# Page - Heading (make this hero)
+
+=========================================================== */
+
+.o-page-heading {
+	padding-top: 9rem;
+
+	.s-home & {
+		padding-top: 0;
+	}
+}
+
+.o-page-heading__description {
+	color: $dark-3;
+}
+
+.o-page-heading__ctas {
+	margin-top: $line-height;
+}
+
+.o-page-heading--cover {
+	padding-top: 5rem;
+}
+
+@include respond-max( $mq-small ) {
+	.o-page-heading__figure {
+		padding-top: $padding-small / 2;
+	}
+}
+
+@include respond-min-max( $mq-small, $mq-medium ) {
+	.o-page-heading__figure {
+		padding-top: $padding-medium / 2;
+	}
+}
+
+@include respond-min-max( $mq-medium, $mq-large ) {
+	.o-page-heading__figure {
+		padding-top: $padding-large / 2;
+	}
+}
+
+@include respond-max( $mq-large ) {
+	.o-page-heading__figure {
+		margin: 0 auto;
+		max-width: 54rem;
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.o-page-heading {
+		padding-top: $padding-large + 9rem;
+	}
+
+	.o-page-heading--cover {
+		.o-page-heading__row {
+			@include clearfix;
+		}
+
+		.o-page-heading__content,
+		.o-page-heading__figure {
+			float: left;
+			width: 50%;
+		}
+
+		.u-word-wrap {
+			display: block;
+		}
+
+		// @todo prefix under cssvhunit
+		height: 100vh;
+
+		.flexbox & {
+			align-items: center;
+			display: flex;
+		}
+	}
+
+	.o-page-heading--center-content {
+		text-align: center;
+	}
+
+	.o-page-heading--two-col {
+		.o-page-heading__row {
+			@include clearfix;
+		}
+
+		.o-page-heading__content {
+			float: left;
+			width: 50%;
+		}
+		.o-page-heading__figure {
+			float: right;
+			width: 45%;
+		}
+
+		.u-word-wrap {
+			display: block;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# TEXT
+	# Text
 
 =========================================================== */
 
@@ -21,7 +21,7 @@ select,
 button {
 	color: $text-colour;
 	font-family: $font-family;
-	font-size: $font-size--small;
+	font-size: $font-size-small;
 	font-feature-settings: 'liga', 'kern'; // http://elliotjaystocks.com/blog/kerning/
 	font-kerning: normal;
 	line-height: $line-height;
@@ -73,7 +73,7 @@ em {
 	textarea,
 	select,
 	button {
-		font-size: $font-size--large;
+		font-size: $font-size-large;
 	}
 
 	body {

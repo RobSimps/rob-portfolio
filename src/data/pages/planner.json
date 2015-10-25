@@ -1,0 +1,134 @@
+{
+	"page-heading": {
+		"one-col": true,
+		"heading": "Planner <span class='u-highlight-text'>case studies</span>",
+		"description": "<p>A small show case of our most recent and best work</p>"
+	},
+	"name": {
+		"label": "What is your <span class='u-highlight-text'>name</span>?",
+		"type": "text",
+		"placeholder": "John Doe",
+		"for": "pl-name",
+		"errorEmpty": "Please enter your full name"
+	},
+	"company": {
+		"label": "What is your <span class='u-highlight-text'>company name</span>?",
+		"type": "text",
+		"placeholder": "geckotree",
+		"for": "pl-company-name",
+		"errorEmpty": "Please enter your company name"
+	},
+	"email": {
+		"label": "What is your <span class='u-highlight-text'>email</span> address?",
+		"type": "email",
+		"placeholder": "john@doe.co.uk",
+		"for": "pl-email",
+		"errorEmpty": "Please enter your email address name",
+		"errorInvalid": "Please enter a valid email address"
+	},
+	"services": {
+		"label": "What <span class='u-highlight-text'>services</span> do you require?",
+		"checkboxes": [ {
+			"checkValue": "Web & interface",
+			"for": "pl-service-web"
+		}, {
+			"checkValue": "Illustration",
+			"for": "pl-service-illustration"
+
+		}, {
+			"checkValue": "Emailer",
+			"for": "pl-service-emailer"
+		} ]
+	},
+	"designOrCode": {
+		"label": "Will you need us to <span class='u-highlight-text'>design</span> and <span class='u-highlight-text'>code</span> the website?",
+		"checkboxes": [ {
+			"checkValue": "Design",
+			"for": "pl-design"
+		}, {
+			"checkValue": "Code",
+			"for": "pl-code"
+		} ]
+	},
+	"website": {
+		"optional": true,
+		"label": "Do you have an existing <span class='u-highlight-text'>website</span>?",
+		"type": "url",
+		"placeholder": "yourwebsite.co.uk",
+		"for": "pl-website",
+		"errorInvalid": "Please enter a valid website url"
+	},
+	"pages": {
+		"label": "<span class='u-highlight-text'>How many pages</span> will need designing/building?",
+		"radios": [ {
+			"radioValue": "1-5",
+			"for": "pl-pages-1to5",
+			"name": "pages"
+		}, {
+			"radioValue": "5-10",
+			"for": "pl-pages-5to10",
+			"name": "pages"
+		}, {
+			"radioValue": "10-15+",
+			"for": "pl-pages-10to15",
+			"name": "pages"
+		}, {
+			"radioValue": "Not sure",
+			"for": "pl-pages-not-sure",
+			"name": "pages"
+		} ]
+	},
+	"about": {
+		"label": "Tell us abit <span class='u-highlight-text'>about</span> your project?",
+		"placeholder": "This will include examples of the kind of things we're looking for in a project overview.",
+		"for": "textarea"
+	},
+	"deadline": {
+		"label": "What is your <span class='u-highlight-text'>deadline</span>?",
+		"radios": [ {
+			"radioValue": "Less than 1 month",
+			"for": "pl-deadline-under-1-month",
+			"name": "deadline"
+		}, {
+			"radioValue": "1-2 months",
+			"for": "pl-deadline-1to2-months",
+			"name": "deadline"
+		}, {
+			"radioValue": "2-3 months",
+			"for": "pl-deadline-2to3-months",
+			"name": "deadline"
+		}, {
+			"radioValue": "3+ months",
+			"for": "pl-deadline-3-months",
+			"name": "deadline"
+		} ]
+	},
+	"budget": {
+		"label": "What is your <span class='u-highlight-text'>budget</span>?",
+		"radios": [ {
+			"radioValue": "Less than £1,000",
+			"for": "pl-deadline-under-1000",
+			"name": "budget"
+		}, {
+			"radioValue": "£1,000-£2,500",
+			"for": "pl-deadline-1000-2500",
+			"name": "budget"
+		}, {
+			"radioValue": "£2,500-£5,000",
+			"for": "pl-deadline-2500-5000",
+			"name": "budget"
+		}, {
+			"radioValue": "£5,000-£7,500",
+			"for": "pl-deadline-5000-7500",
+			"name": "budget"
+		}, {
+			"radioValue": "£7,500-£10,000",
+			"for": "pl-deadline-7500-10000",
+			"name": "budget"
+		}, {
+			"radioValue": "£10,000+",
+			"for": "pl-deadline-10000",
+			"name": "budget"
+		} ]
+	}
+}

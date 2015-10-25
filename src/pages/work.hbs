@@ -1,0 +1,34 @@
+---
+title: Featured case studies
+pageClass: s-work
+nav: work
+---
+
+{{>page-heading work.page-heading}}
+
+<section class="o-section o-wrap o-wrap--x-large">
+	<div class="c-case-study-card-row">
+		<div class="c-case-study-card-col">
+			{{>card card.geckotree}}
+		</div>
+		
+		<div class="c-case-study-card-col">
+			{{>card card.adspy}}
+		</div>
+	</div>
+</section>
+
+<section class="o-section">
+	<header class="o-section__header o-section__header--center">
+		<div class="o-wrap o-wrap--large">
+			<h2 class="o-section__header__heading">What we're currently <span class="u-highlight-text">working on</span></h2>
+
+			<div class="o-section__header__description">
+				{{{description}}}
+			</div>
+		</div>
+	</header>
+	{{> feat-media-grid work.media}}
+</section>
+
+{{>footer footer}}

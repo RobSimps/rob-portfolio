@@ -1,5 +1,5 @@
 /* Modernizr (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-cssclasses-cssanimations-svg-flexbox
+ * Build: http://modernizr.com/download/#-cssclasses-svg-csstransitions-csstransforms-cssanimations-opacity-flexbox
  */
 ;
 
@@ -22,7 +22,13 @@ window.Modernizr = (function( window, document, undefined ) {
     inputElem  ,
 
 
-    toString = {}.toString,    omPrefixes = 'Webkit Moz O ms',
+    toString = {}.toString,
+
+    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
+
+
+
+    omPrefixes = 'Webkit Moz O ms',
 
     cssomPrefixes = omPrefixes.split(' '),
 
@@ -156,9 +162,30 @@ window.Modernizr = (function( window, document, undefined ) {
     }    tests['flexbox'] = function() {
       return testPropsAll('flexWrap');
     };
+
+
+
+    tests['opacity'] = function() {
+                setCssAll('opacity:.55');
+
+                    return (/^0.55$/).test(mStyle.opacity);
+    };
+
+
     tests['cssanimations'] = function() {
         return testPropsAll('animationName');
     };
+
+
+
+    tests['csstransforms'] = function() {
+        return !!testPropsAll('transform');
+    };    tests['csstransitions'] = function() {
+        return testPropsAll('transition');
+    };
+
+
+
     tests['svg'] = function() {
         return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
     };
@@ -207,6 +234,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     Modernizr._version      = version;
 
+    Modernizr._prefixes     = prefixes;
     Modernizr._domPrefixes  = domPrefixes;
     Modernizr._cssomPrefixes  = cssomPrefixes;
 

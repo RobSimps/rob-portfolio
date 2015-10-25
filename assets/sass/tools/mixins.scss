@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# MIXINS
+	# Mixins
 
 =========================================================== */
 
@@ -60,4 +60,10 @@
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+@mixin icon( $colour, $height, $width ) {
+	fill: $colour;
+	height: $height;
+	width: $width;
 }

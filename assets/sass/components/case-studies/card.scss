@@ -1,112 +1,8 @@
 /* ===========================================================
 
-	# CASE STUDY - CARD
+	# Case Study - Card
 
 =========================================================== */
-
-.c-case-study-card--geckotree {
-	.c-case-study-card__link {
-		background-color: rgba( $geckotree-pri, .2 );
-
-		&:hover {
-			background-color: rgba( $geckotree-pri, .3 );
-		}
-
-		.no-svg & {
-			background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.png' );
-		}
-
-		.svg & {
-			background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg' );
-		}
-	}
-
-	.c-case-study-card__services {
-		color: $geckotree-pri
-	}
-
-	.c-case-study-card__button {
-		background: $geckotree-pri;
-	}
-}
-
-.c-case-study-card--adspy {
-	.c-case-study-card__link {
-		background-color: rgba( $adspy-pri, .2 );
-
-		&:hover {
-			background-color: rgba( $adspy-pri, .25 );
-		}
-
-		.no-svg & {
-			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.png' );
-		}
-
-		.svg & {
-			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.svg' );
-		}
-	}
-
-	.c-case-study-card__services {
-		color: $adspy-pri
-	}
-
-	.c-case-study-card__button {
-		background: $adspy-pri;
-	}
-}
-
-.c-case-study-card--abagri {
-	.c-case-study-card__link {
-		background-color: rgba( $abagri-pri, .2 );
-
-		&:hover {
-			background-color: rgba( $abagri-pri, .3 );
-		}
-
-		.no-svg & {
-			background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.png' );
-		}
-
-		.svg & {
-			background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg' );
-		}
-	}
-
-	.c-case-study-card__services {
-		color: $abagri-pri
-	}
-
-	.c-case-study-card__button {
-		background: $abagri-pri;
-	}
-}
-
-.c-case-study-card--hmv {
-	.c-case-study-card__link {
-		background-color: rgba( $hmv-pri, .2 );
-
-		&:hover {
-			background-color: rgba( $hmv-pri, .25 );
-		}
-
-		.no-svg & {
-			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.png' );
-		}
-
-		.svg & {
-			background-image: url( '#{$images}/case-studies/adspy/adspy-logo.svg' );
-		}
-	}
-
-	.c-case-study-card__services {
-		color: $hmv-pri;
-	}
-
-	.c-case-study-card__button {
-		background: $hmv-pri;
-	}
-}
 
 .c-case-study-card__link {
 	background-position: bottom -7rem right -12rem;
@@ -122,21 +18,28 @@
 }
 
 .c-case-study-card__header {
-	margin-bottom: $padding-small;
 	max-width: 54rem;
+
+	& + .c-case-study-card__ctas {
+		margin-top: $padding-small;
+	}
 }
 
 .c-case-study-card__heading {
 	color: $heading-colour;
+	padding-bottom: .2em;
 }
 
 .c-case-study-card__services {
 	display: inline-block;
-	margin-bottom: $line-height / 2;
+
+	& + .c-case-study-card__description {
+		margin-top: $line-height / 2;
+	}
 }
 
 .c-case-study-card__description {
-	color: $heading-colour;
+	color: $text-colour;
 }
 
 .c-case-study-card__button {
@@ -191,20 +94,17 @@
 		padding: $padding-medium $padding-small;
 	}
 
-	.c-case-study-card__header {
-		margin-bottom: $padding-small;
+	.c-case-study-card__header + .c-case-study-card__ctas {
+		margin-top: $padding-small;
 	}
 
 	.cssanimations {
 		.c-case-study-card {
+			animation: fadeInUp $speed * 2 $timing-function-2 both;
 			opacity: 0;
 		}
 
-		.is-inview .c-case-study-card {
-			animation: fadeInUp $speed * 2 cubic-bezier( 0.165, 0.84, 0.44, 1 ) both;
-		}
-
-		@for $i from 1 through 4 {
+		@for $i from 1 through 2 {
   			.c-case-study-card-row > :nth-child( #{$i} ) {
   				.c-case-study-card {
   					animation-delay: #{($i * .2)}s;

@@ -1,0 +1,45 @@
+/* ===========================================================
+
+	# AdSpy - Style Tiles
+
+=========================================================== */
+
+.s-case-study-adspy {
+	.o-carousel__nav__button {
+		&:hover {
+			color: $adspy-pri;
+		}
+
+		&:focus {
+			color: $adspy-sec;
+		}
+
+		&.is-active {
+			color: $white;
+		}
+	}
+
+	.o-carousel__nav__slider {
+		background: $adspy-pri;
+	}
+
+	@include respond-max( $mq-medium ) {
+		.o-carousel__list,
+		.o-carousel__item {
+			opacity: 1;
+			width: 100%!important;
+		}
+
+		.o-carousel__list {
+			margin-bottom: 0;
+		}
+
+		.o-carousel__item + .o-carousel__item {
+			margin-top: $padding-small / 2;
+		}
+
+		.o-carousel__nav__button {
+			display: none;
+		}
+	}
+}

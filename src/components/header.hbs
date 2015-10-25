@@ -1,13 +1,13 @@
 <header class="c-header" role="banner">
 	<div class="c-header__inner">
 		<a href="index.html" class="c-header__logo">
-			<svg class="icon icon--logo">
+			<svg class="u-icon u-icon--logo">
                 <use xlink:href="#icon--logo"></use>
             </svg>
 		</a>
 
 		<button class="c-header__toggle-menu-button" id="toggle-menu" aria-haspopup="true" data-module="Toggle" data-toggle="js-nav">
-			<svg class="icon icon--menu">
+			<svg class="u-icon u-icon--menu">
                 <use xlink:href="#icon--menu"></use>
             </svg>
 		</button>
@@ -15,42 +15,42 @@
 		<nav class="c-nav js-nav" aria-labelledby="toggle-menu" role="navigation">
 			<div class="c-nav__list">
 				<div class="c-nav__item">
-					<a href="work.html" class="c-nav__link">
+					<a href="work.html" class="c-nav__link{{#is page.nav 'work'}} is-active{{/is}}">
 						work 
-						<svg class="icon icon--briefcase">
+						<svg class="u-icon u-icon--briefcase">
                             <use xlink:href="#icon--briefcase"></use>
                         </svg>
 					</a>
 				</div>
 				<div class="c-nav__item">
-					<a href="services.html" class="c-nav__link">
+					<a href="services.html" class="c-nav__link{{#is page.nav 'services'}} is-active{{/is}}">
 						services 
-						<svg class="icon icon--coffee">
+						<svg class="u-icon u-icon--coffee">
                             <use xlink:href="#icon--coffee"></use>
                         </svg>
 					</a>
 				</div>
 				<div class="c-nav__item">
-					<a href="about.html" class="c-nav__link">
+					<a href="about.html" class="c-nav__link"{{#is page.nav 'about'}} is-active{{/is}}>
 						about 
-						<svg class="icon icon--heart">
+						<svg class="u-icon u-icon--heart">
                             <use xlink:href="#icon--heart"></use>
                         </svg>
 					</a>
 				</div>
 				<div class="c-nav__item--align-right">
 					<div class="c-nav__item">
-						<a href="blog.html" class="c-nav__link">
+						<a href="blog.html" class="c-nav__link{{#is page.nav 'blog'}} is-active{{/is}}">
 							blog 
-							<svg class="icon icon--chat">
+							<svg class="u-icon u-icon--chat">
 	                            <use xlink:href="#icon--chat"></use>
 	                        </svg>
 						</a>
 					</div>
 					<div class="c-nav__item">
-						<a href="#" class="c-nav__link c-nav__link--button">
+						<a href="planner.html" class="c-nav__link c-nav__link--button{{#is page.nav 'planner'}} is-active{{/is}}">
 							planner 
-							<svg class="icon icon--feather">
+							<svg class="u-icon u-icon--feather">
 	                            <use xlink:href="#icon--feather"></use>
 	                        </svg>
 						</a>

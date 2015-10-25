@@ -1,6 +1,6 @@
 /* ===========================================================
 
-	# BUTTONS
+	# Buttons
 
 =========================================================== */
 
@@ -9,15 +9,24 @@
 	display: inline-block;
 	font-weight: $bold;
 	line-height: 1;
-	padding: 1.5rem 2rem; // 2rem 3rem
+	padding: 1.3rem 2rem;
 	transition: background $speed ease,
 				border-color $speed ease,
-				box-shadow $speed ease,
 				color $speed ease,
 				transform $speed ease;
 
+	.u-icon--arrow-right {
+		@include icon( $white, 1rem, .8rem );
+		margin-left: $padding-small / 8;
+		transition: fill $speed ease,
+					transform $speed ease;
+	}
+
+	&:hover,
 	&:focus {
-		box-shadow: 0 .3rem 0 0 rgba( $black, .1 );
+		.u-icon--arrow-right {
+			transform: translateX( .4rem );
+		}
 	}
 
 	&:active {
@@ -26,25 +35,35 @@
 }
 
 .c-button--primary {
-	background: $sec;
+	background: $pri;
+	border: $border-width solid $pri;
 	color: $white;
 
 	&:hover,
 	&:focus {
-		background: $pri;
+		background: $sec;
+		border-color: $sec;
 		color: $white;
 	}
 }
 
 .c-button--secondary {
-	border: $border-width solid $sec;
-	color: $sec;
+	border: $border-width solid $pri;
+	color: $pri;
+
+	.u-icon--arrow-right {
+		fill: $pri;
+	}
 
 	&:hover,
 	&:focus {
-		background: $pri;
-		border-color: $pri;
+		background: $sec;
+		border-color: $sec;
 		color: $white;
+
+		.u-icon--arrow-right {
+			fill: $white;
+		}
 	}
 }
 

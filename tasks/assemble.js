@@ -6,9 +6,9 @@ module.exports = {
 			flatten: true,
 			layoutdir: '<%= siteFolder %>/layouts',
 			layout: 'site.hbs',
-			partials: [ '<%= siteFolder %>/components/**/*.hbs' ]
+			partials: [ '<%= siteFolder %>/components/**/**/*.hbs' ]
 		},
-		src: '<%= siteFolder %>/pages/*.hbs',
+		src: '<%= siteFolder %>/pages/**/*.hbs',
 		dest: '.'
 	},
 };

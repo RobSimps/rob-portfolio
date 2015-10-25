@@ -1,0 +1,20 @@
+/* ===========================================================
+
+	# AdSpy - Colours
+
+=========================================================== */
+
+.c-case-study__colours__colour--pri {
+	background: $adspy-pri;
+	background: linear-gradient( to right, $adspy-pri 50%, darken( $adspy-pri, 3 ) 50% );
+}
+
+.c-case-study__colours__colour--sec {
+	background: $adspy-sec;
+	background: linear-gradient( to right, $adspy-sec 50%, darken( $adspy-sec, 3 ) 50% );
+}
+
+.c-case-study__colours__colour--ter {
+	background: $adspy-ter;
+	background: linear-gradient( to right, $adspy-ter 50%, darken( $adspy-ter, 5 ) 50% );
+}

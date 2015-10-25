@@ -38,8 +38,9 @@ module.exports = function( grunt ) {
 		'css:dev',
 		'js:dev',
 		'assemble',
-		// 'icons',
+		'images:dev',
 		'todo',
+		'browserSync',
 		'watch'
 	] );
 
@@ -78,16 +79,10 @@ module.exports = function( grunt ) {
 		'uglify'
 	] );
 
-	// grunt.registerTask( 'icons', [
-	// 	'svgstore',
-	// 	'replace'
-	// ] );
-
-	// grunt.registerTask( 'images', [
-	// 	'svgmin:svgImages',
-	// 	'svg2png',
-	// 	'copy:brandIcons',
-	// 	'copy:bitmapImages',
-	// 	'imageoptim'
-	// ] );
+	grunt.registerTask( 'images:dev', [
+		'copy:images',
+		'clean:icons',
+		'svgstore',
+		'replace'
+	] );
 };
