@@ -16,7 +16,7 @@ module.exports = function( grunt ) {
 	var vars = {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
-		assetsBuildFolder: 'assets/build',
+		assetsBuildFolder: 'umbraco/assets',
 		siteFolder: 'src'
 	};
 

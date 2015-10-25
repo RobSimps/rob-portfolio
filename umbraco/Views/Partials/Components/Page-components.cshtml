@@ -1,0 +1,95 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<IPublishedContent>
+@{
+    var components = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("PageComponents");
+
+	if( components.Any() ) {
+
+		foreach(var item in components) {
+
+		    switch( item.DocumentTypeAlias ) {
+				case "Text":
+					@text( item )
+					break;
+				case "Image":
+					@image( item )
+					break;
+				case "Video":
+					@video( item )
+					break;
+				case "Gallery":
+					@gallery( item )
+					break;
+				case "Quote":
+					@quote( item )
+					break;
+				case "Embed":
+					@embed( item )
+					break;
+				default:
+					<p>@item.DocumentTypeAlias</p>
+					break;
+		    }
+		}
+		
+	}
+
+}
+
+@helper text( IPublishedContent item ) {
+	@item.GetPropertyValue("Text")
+}
+
+@helper image( IPublishedContent item ) {
+	var imageId = item.GetPropertyValue("Image");
+
+	if( imageId != null ) {
+		var image = Umbraco.TypedMedia( imageId );
+		string alignment = "o-media--" + Umbraco.GetPreValueAsString(item.GetPropertyValue<int>("Align")).ToLower();
+
+		<figure class="o-media @alignment">
+		    <img src="@image.Url?width=800&height=200&mode=crop" alt="@image.GetPropertyValue("AltText")" itemprop="image">
+		    @if( image.HasValue("Caption") ) {
+		    	<figcaption>@image.GetPropertyValue("Caption")</figcaption>
+		    }
+		</figure>
+
+	}
+}
+
+@helper video( IPublishedContent item ) {
+	<p>Need to do video</p>
+}
+
+@helper gallery( IPublishedContent item ) {
+	var selection = item.GetPropertyValue("Gallery").ToString().Split(',');
+
+	<figure class="">
+			
+		@foreach( var id in selection ) {
+			var image = Umbraco.TypedMedia( id );
+			<a href="@image.Url?width=1200&upscale=false" title="@image.GetPropertyValue("Caption")">
+				<img src="@image.Url?width=200&height=200&mode=crop" alt="@image.GetPropertyValue("AltText")" itemprop="image">
+			</a>
+		}
+		@if( item.HasValue("Caption") ) {
+			<figcaption>@item.GetPropertyValue("Caption")</figcaption>
+		}
+	</figure>
+}
+
+@helper quote( IPublishedContent item ) {
+	
+	<blockquote class="o-blockquote">
+		@item.GetPropertyValue("Quote")
+		@if( item.HasValue("Author") ) {
+			<footer>@item.GetPropertyValue("Author")</footer>
+		}
+	</blockquote>
+
+}
+
+@helper embed( IPublishedContent item ) {
+	@Html.Raw(item.GetPropertyValue("Embed"))
+}
+
+

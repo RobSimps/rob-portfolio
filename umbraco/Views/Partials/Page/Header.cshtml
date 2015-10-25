@@ -1,0 +1,20 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+<header class="c-header" role="banner">
+	<div class="c-header__inner">
+		<a href="/" class="c-header__logo">
+			<svg class="u-icon u-icon--logo">
+                <use xlink:href="#icon--logo"></use>
+            </svg>
+		</a>
+
+		<button class="c-header__toggle-menu-button" id="toggle-menu" aria-haspopup="true" data-module="Toggle" data-toggle="js-nav">
+			<svg class="u-icon u-icon--menu">
+                <use xlink:href="#icon--menu"></use>
+            </svg>
+		</button>
+
+		@Html.Partial("Page/Navigation")
+		
+	</div>
+</header>

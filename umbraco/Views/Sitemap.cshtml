@@ -1,4 +1,54 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = "Site.cshtml";
+
+    var settings = CurrentPage.Site().FirstChild("Settings");
+}
+
+<div class="c-sitemap">
+    @TraversePage(homePage)
+</div>
+
+
+@* TRAVERSE PAGE *@
+@helper TraversePage(dynamic page) {
+    var maxLevelForSitemap = 4;
+ 
+    var selection = page.Children
+        .Where("Visible && Level <= " + maxLevelForSitemap + 
+            " && TemplateId > 0 " +
+            " && DocumentTypeAlias != \"AuthorsFolder\" " +
+            " && DocumentTypeAlias != \"CategoryFolder\" " +
+            " && DocumentTypeAlias != \"PostsFolder\" " +
+            " && DocumentTypeAlias != \"ArticleFolder\" " +
+            " && DocumentTypeAlias != \"CategoryFolderNews\" "
+    );
+
+    @* If any items are returned, render a list *@
+    if (selection.Any()) {
+        <ul class="c-sitemap-level--@(selection.First().Level - 1)">
+            @foreach (var item in selection) {
+                <li class="c-sitemap__item">
+                    <a href="@item.Url"  class="c-sitemap__link">@item.Name</a>
+                    @TraversePage(item)
+                </li>
+            }
+        </ul>
+    }
+}
+
+@* TRAVERSE SELECTION *@
+@helper TraverseSelection( dynamic selection ) {
+
+    if (selection != null ) {
+        <ul class="c-sitemap-level--2">
+            @foreach (var id in selection) {
+                var item = Umbraco.Content(id);
+
+                <li class="c-sitemap__item">
+                    <a href="@item.Url"  class="c-sitemap__link">@item.Name</a>
+                </li>
+            }
+        </ul>
+    }
 }

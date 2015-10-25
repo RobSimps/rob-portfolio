@@ -1,0 +1,68 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{    
+	var homePage = CurrentPage.Site();
+	var primaryNav = homePage.Children.Where("Visible && TemplateId > 0 && SecondaryNav == @0", false);
+	var secondaryNav = homePage.Children.Where("Visible && TemplateId > 0 && SecondaryNav == @0", true);
+}
+
+@if( primaryNav.Any() || secondaryNav.Any() ) {
+	<nav class="c-nav js-nav" aria-labelledby="toggle-menu" role="navigation">
+		<div class="c-nav__list">
+			@foreach( var item in primaryNav ) {
+				<div class="c-nav__item">
+					<a href="@item.Url" class='c-nav__link @(item.IsAncestorOrSelf(CurrentPage) ? "is-active" : null)'>
+						@item.Name 
+						@if( item.HasValue("Icon") ) {
+							string iconName = item.Icon;
+							<svg class="u-icon u-icon--@iconName">
+								<use xlink:href="#icon--@iconName"></use>
+							</svg>
+						}
+					</a>
+	@*				@Traverse( item ) *@
+				</div>
+			}
+		@if( secondaryNav.Any() ) {
+			<div class="c-nav__item--align-right">
+				@foreach( var item in secondaryNav ) {
+					var page = item;
+					bool isCTA = ( page.Name == "Planner" ? true : false );
+
+					<div class="c-nav__item">
+						<a href="@page.Url" class='c-nav__link @(page.IsAncestorOrSelf(CurrentPage) ? "is-active" : null) @( isCTA ? "c-nav__link--button" : null )'>
+							@page.Name
+							<svg class="u-icon u-icon--@page.Icon">
+	                            <use xlink:href="#icon--@page.Icon"></use>
+	                        </svg>
+						</a>
+					</div>
+				}
+			</div>
+		}
+	</nav>
+}
+
+		
+
+@* Helper method to travers through all descendants *@
+@helper Traverse( dynamic page ) {
+    var maxLevelForNav = 3;
+	var items = page.Children.Where("Visible && Level <= " + maxLevelForNav + 
+		" && TemplateId > 0 " +
+		" && DocumentTypeAlias != \"Listing\" " +
+		" && DocumentTypeAlias != \"AuthorFolder\" " +
+		" && DocumentTypeAlias != \"CategoryFolder\" " +
+		" && DocumentTypeAlias != \"Rss\" "
+	);
+
+    if (items.Any()) {
+	        <ul class="c-nav__list--sub">
+    	        @foreach (var item in items) {
+					<li class="c-nav__item c-nav__item--child">
+						<a href="@item.Url" class="c-nav__link @(CurrentPage.Id == item.Id ? "active" : null)">@item.Name</a>
+						@Traverse(item)
+	                </li>
+    	        }
+        	</ul>
+    }
+}
