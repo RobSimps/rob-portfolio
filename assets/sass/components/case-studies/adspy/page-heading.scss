@@ -6,13 +6,9 @@
 
 .s-case-study-adspy {
 	.o-page-heading {
-		background-color: $adspy-pri-light;
+		background-color: $adspy-pri;
 		background-position: bottom;
 		background-repeat: repeat-x;
-
-		.no-svg & {
-			background-image: url( '#{$images}/case-studies/adspy/city-background.png' );
-		}
 
 		.svg & {
 			background-image: url( '#{$images}/case-studies/adspy/city-background.svg' );
@@ -20,12 +16,18 @@
 	}
 
 	.o-page-heading__heading {
+		color: $white;
 		padding-bottom: .2em;
 	}
 
 	.o-page-heading__meta {
+		color: $text-colour;
 		display: block;
 		margin-bottom: $line-height;
+	}
+
+	.o-page-heading__description {
+		color: $white;
 	}
 
 	.o-page-heading__figure {

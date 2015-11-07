@@ -41,19 +41,15 @@
 
 ## assets/sass/components/nav.scss
 
--  **todo** `(line 119)`  add when toggle nav
+-  **todo** `(line 101)`  add when toggle nav
 
 ## assets/sass/objects/carousel.scss
 
 -  **todo** `(line 43)`  make this specific to component not object
 -  **todo** `(line 67)`  states
 
-## assets/sass/objects/page/heading.scss
-
--  **todo** `(line 74)`  prefix under cssvhunit
-
 ## assets/sass/settings/global.scss
 
+-  **todo** `(line 24)`  update?
 -  **todo** `(line 25)`  update?
--  **todo** `(line 26)`  update?
--  **todo** `(line 28)`  update?
+-  **todo** `(line 27)`  update?

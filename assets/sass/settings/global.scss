@@ -16,8 +16,7 @@ $images: 	'#{$base-dir}/img';
 
 =========================================================== */
 
-$white: 			#FFFFFF;
-$black: 			#000000;
+
 $red:				red;
 $green:				green;
 
@@ -26,13 +25,20 @@ $light-2:			#EFEFEF; // @todo update?
 $light-3:			#DEDEDE; // @todo update?
 $med-1:				#94A5AC;
 $med-2:				#858B92; // @todo update?
-$dark-1:			#272727;
 $dark-2:			#383838;
 $dark-3:			#546e7a;
 
+$pri-light:			#DDF0E3;
+
+
+$white: 			#FFFFFF;
+$black: 			#000000;
+
+$dark-1:			#2D2D2D;
+
 $pri:				#57B275;
 $sec:				#F05D71;
-$pri-light:			#DDF0E3;
+$ter:				#F0C83A;
 
 $twitter: 			#55ACEE;
 $dribbble: 			#EA4C89;
