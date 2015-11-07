@@ -12,6 +12,10 @@
 	.c-article__header {
 		text-align: center;
 	}
+
+	.c-article__heading {
+		padding-bottom: $padding-small / 2;
+	}
 }
 
 @include respond-min( $mq-large ) {

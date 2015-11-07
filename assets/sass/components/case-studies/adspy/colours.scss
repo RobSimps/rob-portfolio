@@ -18,3 +18,29 @@
 	background: $adspy-ter;
 	background: linear-gradient( to right, $adspy-ter 50%, darken( $adspy-ter, 5 ) 50% );
 }
+
+@include respond-min( $mq-animate ) {
+	.csstransitions.csstransforms {
+		.c-case-study__colours__colour {
+			opacity: 0;
+			transform: scale( .5 );
+			transition: opacity $speed * 2 ease,
+						transform $speed * 2 ease;
+		}
+
+		.c-case-study__colours__colour:nth-child( 2 ) {
+			transition-delay: $speed;
+		}
+
+		.c-case-study__colours__colour:nth-child( 3 ) {
+			transition-delay: $speed * 2;
+		}
+
+		.is-inview {
+			.c-case-study__colours__colour {
+				opacity: 1;
+				transform: scale( 1 );
+			}
+		}
+	}
+}

@@ -3,7 +3,7 @@
 
 	function Inview( el ) {
 		this._$el = el;
-		this._pixelsInview = this._$el.getAttribute( 'data-pixels-inview' ) ? this._$el.getAttribute( 'data-pixels-inview' ) : 400;
+		this._pixelsInview = this._$el.getAttribute( 'data-pixels-inview' ) ? this._$el.getAttribute( 'data-pixels-inview' ) : 200;
 
 		this._classes = {
 			inviewClass: 'is-inview'

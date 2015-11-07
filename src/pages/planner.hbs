@@ -5,7 +5,7 @@ pageClass: s-planner
 
 {{>page-heading planner.page-heading}}
 
-<div class="o-section o-wrap o-wrap--large">
+<form class="o-section o-wrap o-wrap--medium">
 	{{> input planner.name}}
 	{{> input planner.company}}
 	{{> input planner.email}}
@@ -16,4 +16,8 @@ pageClass: s-planner
 	{{> textarea planner.about}}
 	{{> radio planner.deadline}}
 	{{> radio planner.budget}}
-</div>
+
+	<input type="submit" class="c-button c-button--secondary" value="Send">
+</form>
+
+{{>footer footer}}

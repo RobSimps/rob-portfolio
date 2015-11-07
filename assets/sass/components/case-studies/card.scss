@@ -97,10 +97,12 @@
 	.c-case-study-card__header + .c-case-study-card__ctas {
 		margin-top: $padding-small;
 	}
+}
 
+@include respond-min( $mq-animate ) {
 	.cssanimations {
 		.c-case-study-card {
-			animation: fadeInUp $speed * 2 $timing-function-2 both;
+			animation: fadeInUp $speed * 3 $timing-function-2 both;
 			opacity: 0;
 		}
 

@@ -1,7 +1,8 @@
 {
 	"cta": true,
 	"heading": "Ready? Tell us <span class='u-highlight-text'>your story</span>",
-	"button": "planner",
+	"button": "contact",
+	"url": "mailto:hello@geckotree.co.uk",
 	"social": [ {
 		"text": "Twitter",
 		"url": "https://twitter.com/geckotree",

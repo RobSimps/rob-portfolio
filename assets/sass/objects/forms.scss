@@ -6,7 +6,7 @@
 
 .o-form__field {
 	& + & {
-		margin-top: 2rem;
+		padding-top: $padding-medium;
 	}
 }
 
@@ -21,18 +21,21 @@
 }
 
 .o-input {
+	@include heading-font-size( $gamma-small );
 	padding-bottom: 0;
 }
 
 .o-validation {
-	display: block;
+	display: none;
 	margin-top: $line-height / 4;
 
 	.is-valid & {
+		display: block;
 		color: $success;
 	}
 
 	.is-invalid & {
+		display: block;
 		color: $error;
 	}
 }
@@ -41,9 +44,9 @@
 
 //= LABEL ====================================================
 
-.o-label,
-.o-fieldset__legend {
+.o-label {
 	font-weight: $bold;
+	padding-bottom: $line-height / 4;
 }
 
 .o-label__note {
@@ -107,7 +110,8 @@
 //= FIELDSET =================================================
 
 .o-fieldset__legend {
-	margin-bottom: $line-height / 2;
+	font-weight: $bold;
+	padding-bottom: $line-height / 4;
 	width: 100%;
 
 	.o-label__note {
@@ -122,9 +126,57 @@
 .o-fieldset__item {
 	margin: 0;
 
+	.o-label {
+		font-weight: normal;
+	}
+
 	input {
 		margin: 0 .5rem 0 0;
 		width: auto;
+	}
+}
+
+.enhance {
+	.o-fieldset__item {
+		.o-label {
+			// background: $light-2;
+			// border: $border-width solid $light-3;
+			// border-radius: $border-radius;
+			font-weight: normal;
+			padding: 2rem 2rem 2rem 4rem;
+			position: relative;
+
+			.u-icon {
+				@include icon( $light-3, 1.6rem, 1.6rem );
+			}
+
+			&:after {
+				background: $light-3;
+				bottom: 2rem;
+				box-sizing: border-box;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 2rem;
+				width: 2.5rem;
+			}
+		}
+
+		.o-label--checkbox {
+			&:after {
+				border-radius: $border-radius;
+			}
+		}
+
+		.o-label--radio {
+			&:after {
+				border-radius: 100%;
+			}
+		}
+
+		input {
+			display: none;
+		}
 	}
 }
 
@@ -136,3 +188,68 @@
 .o-textarea + .button {
 	margin-top: $line-height * 2;
 }
+
+@include respond-max( $mq-medium ) {
+	.enhance {
+		.o-fieldset__item + .o-fieldset__item {
+			// margin-top: $padding-small / 2;
+		}
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.o-form__field {
+		& + & {
+			padding-top: $padding-large;
+		}
+	}
+
+	.enhance {
+		.o-fieldset__list {
+			margin-left: -$padding-small / 2;
+		}
+
+		.o-fieldset__item {
+			float: left;
+			padding-left: $padding-small / 2;
+			width: 50%;
+
+			&:nth-child( n+3 ) {
+				// margin-top: $padding-small / 4;
+			}
+
+			.o-label {
+				&:after {
+					width: 3rem;
+				}
+			}
+		}
+	}
+}
+
+// @include respond-max( $mq-medium ) {
+// 	.o-fieldset,
+// 	.o-input-wrap {
+// 		.u-icon {
+// 			display: none;
+// 		}
+// 	}
+// }
+
+// @include respond-min( $mq-medium ) {
+// 	.o-input-wrap {
+// 		position: relative;
+
+// 		.o-input {
+// 			padding-right: 4rem;
+// 		}
+
+// 		.u-icon {
+// 			@include icon( $light-3, 3rem, 3rem );
+// 			margin-top: -1.5rem;
+// 			position: absolute;
+// 			right: 0;
+// 			top: 50%;
+// 		}
+// 	}
+// }

@@ -1,11 +1,17 @@
-<div class="o-section o-form__field">
+<div class="o-form__field{{#if fieldClass}} {{fieldClass}}{{/if}}">
 	<fieldset class="o-fieldset">
 		<legend class="o-fieldset__legend">{{{label}}} {{#if optional}}<span class="o-label__note">Optional</span>{{/if}}</legend>
-		<ul class="o-fieldset__list">
+		<ul class="o-fieldset__list{{#if listClass}} {{listClass}}{{/if}}">
 			{{#each checkboxes}}
-				<li class="o-fieldset__item">
-					<label class="o-label" for="{{for}}">
+				<li class="o-fieldset__item{{#if itemClass}} {{itemClass}}{{/if}}">
+					<label class="o-label o-label--checkbox" for="{{for}}">
 						<input id="{{for}}" type="checkbox"> {{checkValue}}
+
+						{{#if icon}}
+						<svg class="u-icon u-icon--{{icon}}">
+				            <use xlink:href="#icon--{{icon}}"></use>
+				        </svg>
+				        {{/if}}
 					</label>
 				</li>
 			{{/each}}

@@ -50,7 +50,7 @@
 
 ## assets/sass/objects/page/heading.scss
 
--  **todo** `(line 72)`  prefix under cssvhunit
+-  **todo** `(line 74)`  prefix under cssvhunit
 
 ## assets/sass/settings/global.scss
 

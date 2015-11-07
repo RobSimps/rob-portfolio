@@ -1,10 +1,10 @@
-<div class="o-section o-form__field">
+<div class="o-form__field">
 	<fieldset class="o-fieldset">
 		<legend class="o-fieldset__legend">{{{label}}} {{#if optional}}<span class="o-label__note">Optional</span>{{/if}}</legend>
 		<ul class="o-fieldset__list">
 			{{#each radios}}
 				<li class="o-fieldset__item">
-					<label class="o-label" for="{{for}}">
+					<label class="o-label o-label--radio" for="{{for}}">
 						<input id="{{for}}" type="radio" name="{{name}}"> {{radioValue}}
 					</label>
 				</li>

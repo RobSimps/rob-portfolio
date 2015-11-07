@@ -5,6 +5,7 @@ module.exports = {
 			'<%= assetsFolder %>/js/lib/modernizr.js',
 			'<%= assetsFolder %>/bower_components/fastclick/lib/fastclick.js',
 			'<%= assetsFolder %>/bower_components/scrollMonitor/scrollMonitor.js',
+			'<%= assetsFolder %>/bower_components/jribbble/dist/jribbble.js',
 			'<%= assetsFolder %>/js/utils/*.js',
 			'<%= assetsFolder %>/js/components/**/*.js',
 			'<%= assetsFolder %>/js/main.js'

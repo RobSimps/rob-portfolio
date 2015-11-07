@@ -5,6 +5,7 @@
 		"description": "<p>A small show case of our most recent and best work</p>"
 	},
 	"name": {
+		"icon": "heart",
 		"label": "What is your <span class='u-highlight-text'>name</span>?",
 		"type": "text",
 		"placeholder": "John Doe",
@@ -12,6 +13,7 @@
 		"errorEmpty": "Please enter your full name"
 	},
 	"company": {
+		"icon": "heart",
 		"label": "What is your <span class='u-highlight-text'>company name</span>?",
 		"type": "text",
 		"placeholder": "geckotree",
@@ -19,6 +21,7 @@
 		"errorEmpty": "Please enter your company name"
 	},
 	"email": {
+		"icon": "heart",
 		"label": "What is your <span class='u-highlight-text'>email</span> address?",
 		"type": "email",
 		"placeholder": "john@doe.co.uk",
@@ -27,31 +30,43 @@
 		"errorInvalid": "Please enter a valid email address"
 	},
 	"services": {
+		"fieldClass": "c-planner-services",
+		"listClass": "c-planner-services__list",
 		"label": "What <span class='u-highlight-text'>services</span> do you require?",
 		"checkboxes": [ {
+			"itemClass": "c-planner-services__item",
+			"icon": "check",
 			"checkValue": "Web & interface",
 			"for": "pl-service-web"
 		}, {
+			"itemClass": "c-planner-services__item",
+			"icon": "check",
 			"checkValue": "Illustration",
 			"for": "pl-service-illustration"
-
 		}, {
+			"itemClass": "c-planner-services__item",
+			"icon": "check",
 			"checkValue": "Emailer",
 			"for": "pl-service-emailer"
 		} ]
 	},
 	"designOrCode": {
+		"fieldClass": "c-planner-design-code",
+		"listClass": "c-planner-design-code__list",
 		"label": "Will you need us to <span class='u-highlight-text'>design</span> and <span class='u-highlight-text'>code</span> the website?",
 		"checkboxes": [ {
+			"itemClass": "c-planner-design-code__item",
+			"icon": "check",
 			"checkValue": "Design",
 			"for": "pl-design"
 		}, {
+			"itemClass": "c-planner-design-code__item",
+			"icon": "check",
 			"checkValue": "Code",
 			"for": "pl-code"
 		} ]
 	},
 	"website": {
-		"optional": true,
 		"label": "Do you have an existing <span class='u-highlight-text'>website</span>?",
 		"type": "url",
 		"placeholder": "yourwebsite.co.uk",
@@ -59,17 +74,17 @@
 		"errorInvalid": "Please enter a valid website url"
 	},
 	"pages": {
-		"label": "<span class='u-highlight-text'>How many pages</span> will need designing/building?",
+		"label": "How many <span class='u-highlight-text'>pages</span> will need designing / building?",
 		"radios": [ {
-			"radioValue": "1-5",
+			"radioValue": "1 - 5 pages",
 			"for": "pl-pages-1to5",
 			"name": "pages"
 		}, {
-			"radioValue": "5-10",
+			"radioValue": "5 - 10 pages",
 			"for": "pl-pages-5to10",
 			"name": "pages"
 		}, {
-			"radioValue": "10-15+",
+			"radioValue": "10 - 15+ pages",
 			"for": "pl-pages-10to15",
 			"name": "pages"
 		}, {
@@ -90,16 +105,20 @@
 			"for": "pl-deadline-under-1-month",
 			"name": "deadline"
 		}, {
-			"radioValue": "1-2 months",
+			"radioValue": "1 - 2 months",
 			"for": "pl-deadline-1to2-months",
 			"name": "deadline"
 		}, {
-			"radioValue": "2-3 months",
+			"radioValue": "2 - 3 months",
 			"for": "pl-deadline-2to3-months",
 			"name": "deadline"
 		}, {
 			"radioValue": "3+ months",
 			"for": "pl-deadline-3-months",
+			"name": "deadline"
+		}, {
+			"radioValue": "Not sure",
+			"for": "pl-deadline-not-sure",
 			"name": "deadline"
 		} ]
 	},
@@ -107,27 +126,31 @@
 		"label": "What is your <span class='u-highlight-text'>budget</span>?",
 		"radios": [ {
 			"radioValue": "Less than £1,000",
-			"for": "pl-deadline-under-1000",
+			"for": "pl-budget-under-1000",
 			"name": "budget"
 		}, {
-			"radioValue": "£1,000-£2,500",
-			"for": "pl-deadline-1000-2500",
+			"radioValue": "£1,000 - £2,500",
+			"for": "pl-budget-1000-2500",
 			"name": "budget"
 		}, {
-			"radioValue": "£2,500-£5,000",
-			"for": "pl-deadline-2500-5000",
+			"radioValue": "£2,500 - £5,000",
+			"for": "pl-budget-2500-5000",
 			"name": "budget"
 		}, {
-			"radioValue": "£5,000-£7,500",
-			"for": "pl-deadline-5000-7500",
+			"radioValue": "£5,000 - £7,500",
+			"for": "pl-budget-5000-7500",
 			"name": "budget"
 		}, {
-			"radioValue": "£7,500-£10,000",
-			"for": "pl-deadline-7500-10000",
+			"radioValue": "£7,500 - £10,000",
+			"for": "pl-budget-7500-10000",
 			"name": "budget"
 		}, {
 			"radioValue": "£10,000+",
-			"for": "pl-deadline-10000",
+			"for": "pl-budget-10000",
+			"name": "budget"
+		}, {
+			"radioValue": "Not sure",
+			"for": "pl-budget-not-sure",
 			"name": "budget"
 		} ]
 	}

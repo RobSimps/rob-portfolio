@@ -4,9 +4,10 @@
 		"heading": "Featured <span class='u-highlight-text'>case studies</span>",
 		"description": "<p>A small show case of our most recent and best work</p>"
 	},
-	"media": {
+	"dribbble": {
 		"heading": "A look at what we are working on",
 		"description": "<p>We’re Rob and Kev – a small team of freelance creatives based in the UK. We specialise in creating performant, responsive websites, but we do a few other things too – take a look at what we do.</p>",
+		"dribbble": true,
 		"item": [ {
 			"img": "https://d13yacurqjgara.cloudfront.net/users/182241/screenshots/2312600/blog-listing-mobile-thumb.png",
 			"alt": ""

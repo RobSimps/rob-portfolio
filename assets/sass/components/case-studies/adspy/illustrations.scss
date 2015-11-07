@@ -121,7 +121,9 @@
 			left: 50%;
 			width: 60%;
 		}
+	}
 
+	@include respond-min( $mq-animate ) {
 		.csstransitions.csstransforms & {
 			.svg-book,
 			.svg-ipad,
@@ -171,7 +173,7 @@
 				transition-delay: $speed * 7;
 			}
 
-			.c-case-study__illustrations-extras.is-inview {
+			.is-inview {
 				.svg-book,
 				.svg-ipad,
 				.svg-wallet {
