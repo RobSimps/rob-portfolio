@@ -9,16 +9,38 @@
 	padding-top: $padding-small;
 }
 
+.o-section__header {
+	margin-bottom: $padding-small;
+}
+
+.o-section__header__heading {
+	padding-bottom: 0;
+}
+
 @include respond-min( $mq-small ) {
 	.o-section {
 		padding-bottom: $padding-medium;
 		padding-top: $padding-medium;
 	}
+
+	.o-section__header {
+		margin-bottom: $padding-medium;
+	}
 }
 
-@include respond-min( $mq-medium ) {
+@include respond-min( $mq-large ) {
+	.o-section__header--center {
+		text-align: center;
+	}
+}
+
+@include respond-min( $mq-x-large ) {
 	.o-section {
 		padding-bottom: $padding-large;
 		padding-top: $padding-large;
+	}
+
+	.o-section__header {
+		margin-bottom: $padding-large;
 	}
 }

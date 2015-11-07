@@ -9,7 +9,9 @@ select,
 textarea {
 	background: none;
 	border: none;
-	border-bottom: $border-width * 2 solid $border-colour;
+	border-bottom: $border-width solid $border-colour;
+	border-radius: 0;
+	padding: 0;
 	transition: border $speed ease;
 	width: 100%;
 
@@ -42,7 +44,6 @@ textarea {
 
 label {
 	display: block;
-	padding-bottom: 1rem;
 
 	.is-disabled & {
 		cursor: not-allowed;

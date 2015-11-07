@@ -34,7 +34,7 @@
 		'components/listing.scss',
 		'components/listing-side-by-side.scss',
 		'components/article.scss',
-		'components/feat-media-grid.scss';
+		'components/dribbble-shots.scss';
 
 @import 'components/case-studies/card.scss',
 		'components/case-studies/section/section.scss',
@@ -58,6 +58,8 @@
 		'components/case-studies/adspy/colours.scss',
 		'components/case-studies/adspy/feat-img.scss',
 		'components/case-studies/adspy/illustrations.scss';
+
+@import 'components/planner/services.scss';
 
 @import 'trumps/overrides.scss',
 		'trumps/free-content.scss';

@@ -42,4 +42,23 @@
 			display: none;
 		}
 	}
+
+	@include respond-min( $mq-animate ) {
+		.csstransitions &  {
+			.o-carousel__item {
+				opacity: 0;
+				transition: opacity $speed * 4 ease;
+			}
+
+			.is-inview {
+				.o-carousel__item {
+					opacity: .5;
+				}
+
+				.o-carousel__item.is-active {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }

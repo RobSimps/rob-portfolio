@@ -1,16 +1,19 @@
 {
-	"name": "rob-portfolio",
-	"version": "1.0.0",
-	"homepage": "http://robsimpson.me",
-	"authors": [ {
-		"name": "Rob Simpson",
-		"homepage": "http://robsimpson.me",
-		"email": "<hello@robsimpson.me>"
-	} ],
-	"devDependencies": {
-		"fastclick": "~1.0.3",
-		"html5shiv": "~3.7.2",
-		"modernizr": "~2.8.3",
-		"scrollMonitor": "~1.0.10"
-	}
+  "name": "rob-portfolio",
+  "version": "1.0.0",
+  "homepage": "http://robsimpson.me",
+  "authors": [
+    {
+      "name": "Rob Simpson",
+      "homepage": "http://robsimpson.me",
+      "email": "<hello@robsimpson.me>"
+    }
+  ],
+  "devDependencies": {
+    "fastclick": "~1.0.3",
+    "html5shiv": "~3.7.2",
+    "modernizr": "~2.8.3",
+    "scrollMonitor": "~1.0.10",
+    "jribbble": "~2.0.4"
+  }
 }

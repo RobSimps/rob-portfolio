@@ -1,0 +1,119 @@
+/* ===========================================================
+
+	# Feat Media Grid
+
+=========================================================== */
+
+.c-dribbble-shots__figure {
+	background: $light-2;
+	overflow: hidden;
+	padding-top: 75%;
+	position: relative;
+	transition: opacity $speed * 1.5 ease;
+	width: 100%;
+
+	&.is-not-hovered {
+		opacity: .5;
+	}
+
+	&.is-hovered {
+		opacity: 1;
+	}
+}
+
+.c-dribbble-shots__link {
+	display: block;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+.c-dribbble-shots__img {
+	position: relative;
+	width: 100%;
+}
+
+@include respond-max( $mq-medium ) {
+	.c-dribbble-shots__col {
+		& + & {
+			margin-top: $padding-small / 2;
+		}
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.c-dribbble-shots__row {
+		@include clearfix;
+		margin-left: -$padding-small / 4;
+	}
+
+	.c-dribbble-shots__col {
+		float: left;
+		padding-left: $padding-small / 4;
+		width: 50%;
+	}
+}
+
+@include respond-min-max( $mq-medium, $mq-large ) {
+	.c-dribbble-shots__col {
+		& + & {
+			margin-top: $padding-small / 4;
+		}
+
+		&:nth-child( 2 ) {
+			margin-top: 0;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-dribbble-shots__col {
+		width: 33.3333333333%;
+	}
+
+	.c-dribbble-shots__col {
+		& + & {
+			margin-top: $padding-small / 4;
+		}
+
+		&:nth-child( 2 ),
+		&:nth-child( 3 ) {
+			margin-top: 0;
+		}
+	}
+}
+
+@include respond-min( $mq-animate ) {
+	.csstransitions {
+		.c-dribbble-shots__col {
+			opacity: 0;
+			transition: opacity $speed * 4 ease;
+		}
+
+		.is-inview {
+			.c-dribbble-shots__col {
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+@include respond-min( $mq-x-large ) {
+	.c-dribbble-shots__row {
+		margin-left: -$padding-small / 2;
+	}
+
+	.c-dribbble-shots__col {
+		padding-left: $padding-small / 2;
+
+		& + & {
+			margin-top: $padding-small / 2;
+		}
+
+		&:nth-child( 2 ),
+		&:nth-child( 3 ) {
+			margin-top: 0;
+		}
+	}
+}

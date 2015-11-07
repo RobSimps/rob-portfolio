@@ -6,10 +6,6 @@
 
 .o-page-heading {
 	padding-top: 9rem;
-
-	.s-home & {
-		padding-top: 0;
-	}
 }
 
 .o-page-heading__description {
@@ -27,6 +23,12 @@
 @include respond-max( $mq-small ) {
 	.o-page-heading__figure {
 		padding-top: $padding-small / 2;
+	}
+}
+
+@include respond-min( $mq-small ) {
+	.o-page-heading {
+		padding-top: 11rem;
 	}
 }
 

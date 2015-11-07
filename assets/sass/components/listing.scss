@@ -107,6 +107,12 @@
 	}
 }
 
+@include respond-min( 830px ) {
+	.c-listing__meta-data__item--large {
+		margin-bottom: $line-height * 2;
+	}
+}
+
 @include respond-min( $mq-large ) {
 	.c-listing__link {
 		padding: $padding-small;
