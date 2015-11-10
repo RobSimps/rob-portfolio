@@ -5,7 +5,7 @@
 =========================================================== */
 
 html {
-	height: 100%;
+	min-height: 100%;
 }
 
 .o-page {
@@ -17,6 +17,13 @@ html {
 }
 
 .o-page__content {
+	background: $light-1;
 	flex: 1 1 auto;
 	width: 100%;
+}
+
+@include respond-min( $mq-large ) {
+	.o-page {
+		padding-top: 8.8rem;
+	}
 }

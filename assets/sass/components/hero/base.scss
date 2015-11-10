@@ -1,0 +1,73 @@
+/* ===========================================================
+
+	# Hero - Base
+
+=========================================================== */
+
+.c-hero {
+	width: 100%;
+}
+
+.c-hero__heading {
+	color: $white;
+}
+
+.c-hero__description {
+	color: $white;
+	color: rgba( $white, .85 );
+}
+
+.c-hero__cta {
+	margin-top: $line-height * 2;
+}
+
+//@todo vh unit
+.flexbox {
+	.c-hero--cover {
+		min-height: 100vh;
+		min-height: calc( 100vh - 7rem );
+	}
+}
+
+.s-home {
+	.c-hero {
+		background-color: $pri;
+		background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
+		background-position: bottom -10rem right -25rem;
+		background-repeat: no-repeat;
+		background-size: 150%;
+	}
+
+	.c-hero__content {
+		max-width: 80rem;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.s-home {
+		.c-hero {
+			background-position: right -20rem center;
+			background-size: 80%;
+		}
+	}
+
+	.flexbox {
+		.c-hero--cover {
+			align-items: center;
+			display: flex;
+		}
+
+		.c-hero__row {
+			flex-grow: 1;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	//@todo vh unit
+	.flexbox {
+		.c-hero--cover {
+			min-height: calc( 100vh - 8.8rem );
+		}
+	}
+}

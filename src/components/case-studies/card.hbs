@@ -1,25 +1,27 @@
 <article class="c-case-study-card c-case-study-card--{{class}}">
 	<a href="{{url}}" class="c-case-study-card__link">
-		<header class="c-case-study-card__header">
-			<h2 class="c-case-study-card__heading">{{heading}}</h2>
-			<strong class="c-case-study-card__services">{{services}}</strong>
+		<div class="o-section o-wrap o-wrap--x-large">
+			<header class="c-case-study-card__header">
+				<h2 class="c-case-study-card__heading u-alpha">{{heading}}</h2>
+				<strong class="c-case-study-card__services u-intro">{{services}}</strong>
 
-			{{#if description}}
-			<div class="c-case-study-card__description">
-				{{{description}}}
-			</div>
+				{{#if description}}
+				<div class="c-case-study-card__description u-intro">
+					{{{description}}}
+				</div>
+				{{/if}}
+			</header>
+			
+			{{#if button}}
+			<footer class="c-case-study-card__ctas">
+				<span class="c-button c-button--primary-neutral">
+					{{{button}}}
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</span>
+			</footer>
 			{{/if}}
-		</header>
-		
-		{{#if button}}
-		<footer class="c-case-study-card__ctas">
-			<span class="c-button c-case-study-card__button">
-				{{{button}}}
-				<svg class="u-icon u-icon--arrow-right">
-					<use xlink:href="#icon--arrow-right"></use>
-				</svg>
-			</span>
-		</footer>
-		{{/if}}
+		</div>
 	</a>
 </article>

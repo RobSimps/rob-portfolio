@@ -1,13 +1,9 @@
 {
 	"cta": true,
-	"heading": "Ready? Tell us <span class='u-highlight-text'>your story</span>",
+	"heading": "Got a project for us?",
 	"button": "contact",
 	"url": "mailto:hello@geckotree.co.uk",
 	"social": [ {
-		"text": "Twitter",
-		"url": "https://twitter.com/geckotree",
-		"icon": "twitter"
-	}, {
 		"text": "Dribbble",
 		"url": "https://dribbble.com/geckotree",
 		"icon": "dribbble"
@@ -15,5 +11,9 @@
 		"text": "Instagram",
 		"url": "https://instagram.com/geckotree",
 		"icon": "instagram"
+	}, {
+		"text": "Twitter",
+		"url": "https://twitter.com/geckotree",
+		"icon": "twitter"
 	} ]
 }

@@ -14,7 +14,7 @@
 
 .c-header__inner {
 	@include clearfix;
-	padding-top: $padding-small / 2;
+	padding-top: 2rem;
 }
 
 .u-icon--logo {
@@ -40,7 +40,7 @@
 
 .enhance {
 	.c-header {
-		position: fixed;
+		position: absolute;
 		top: 0;
 	}
 }
@@ -57,13 +57,13 @@
 
 	.c-header__logo {
 		display: inline-block;
-		padding: 0 $padding-small / 2;
+		padding: 0 2rem;
 		width: 60%;
 	}
 
 	.c-header__toggle-menu-button {
 		height: 100%;
-		padding: $padding-small / 2 $padding-small / 2 1.5rem;
+		padding: 2rem 2rem 1.5rem;
 		position: absolute;
 		right: 0;
 		text-align: right;
@@ -86,7 +86,7 @@
 
 @include respond-min( $mq-large ) {
 	.c-header__inner {
-		padding: $padding-small / 2 $padding-small;
+		padding: 2rem 4rem;
 	}
 
 	.c-header__logo {

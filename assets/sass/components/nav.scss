@@ -86,7 +86,7 @@
 @include respond-max( $mq-large ) {
 	.c-nav__link {
 		display: block;
-		padding: $padding-small / 4 $padding-small / 2;
+		padding: 1rem 2rem;
 		text-align: left;
 
 		.u-icon {
@@ -135,7 +135,7 @@
 		@include clearfix;
 
 		& > :first-child {
-			padding-left: $padding-small / 4;
+			padding-left: 2rem;
 		}
 	}
 
@@ -145,7 +145,7 @@
 
 	.c-nav__link {
 		display: block;
-		padding: .9rem $padding-small / 2;
+		padding: .9rem 2rem;
 	}
 
 	.c-nav__link--button {

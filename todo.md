@@ -22,22 +22,19 @@
 -  **todo** `(line 32)`  pass time through from html
 -  **todo** `(line 34)`  this is very rigid
 
-## assets/sass/components/case-studies/adspy/card.scss
-
--  **todo** `(line 12)`  hex colour
-
 ## assets/sass/components/case-studies/adspy/feat-img.scss
 
 -  **todo** `(line 7)`  creat more responisve sized images
 -  **todo** `(line 8)`  handle retina images
 
-## assets/sass/components/case-studies/geckotree/card.scss
-
--  **todo** `(line 9)`  hex colour
-
 ## assets/sass/components/hero.scss
 
 -  **todo** `(line 33)`  prefix under cssvhunit
+
+## assets/sass/components/hero/base.scss
+
+-  **todo** `(line 24)`  vh unit
+-  **todo** `(line 67)`  vh unit
 
 ## assets/sass/components/nav.scss
 

@@ -36,6 +36,8 @@ $black: 			#000000;
 
 $dark-1:			#2D2D2D;
 
+$purple-1:			#8682d7;
+
 $pri:				#57B275;
 $sec:				#F05D71;
 $ter:				#F0C83A;
@@ -77,7 +79,7 @@ $type-scale-large:		1.200;
 
 $heading-colour:		$dark-1;
 $text-colour:			$dark-2;
-$background-colour:		$light-1;
+$background-colour:		$dark-1;
 $border-colour:			$light-3;
 $link-colour:			$pri;
 $link-colour-hover:		$sec;
@@ -88,9 +90,10 @@ $error:					$red;
 $success:				$green;
 $disabled:				$light-1;
 
-$padding-small:			4rem;
-$padding-medium:		6rem;
-$padding-large:			8rem;
+$padding-small:			6rem;
+$padding-medium:		9rem;
+$padding-large:			12rem;
+$padding-x-large:		16rem;
 
 $border-width: 			.2rem;
 $border-radius: 		.4rem;

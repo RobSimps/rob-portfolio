@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if lte IE 9]> <html lang="en" class="no-enhance no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="en" class="no-enhance no-js"> <!—<![endif]-->
+<!--[if lte IE 9]> <html lang="en" class="no-enhance lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="s-home no-enhance"> <!—<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -53,7 +53,9 @@
 			<script src="assets/bower_components/html5shiv/dist/html5shiv.min.js"></script>
 			<link rel="stylesheet" href="assets/build/css/ie.css">
 		<![endif]-->
-
+		
+		<!-- @todo concat into head.js -->
+		<script src="assets/js/libs/modernizr.js"></script>
 		<script>
 			if( 'visibilityState' in document ) {
 				var $html = document.querySelector( 'html' );
@@ -62,7 +64,7 @@
 			}
 		</script>
 	</head>
-	<body class="o-page s-home">
+	<body class="o-page">
 		<header class="c-header" role="banner">
 	<div class="c-header__inner">
 		<a href="index.html" class="c-header__logo">
@@ -172,27 +174,29 @@
 			<div class="c-case-study-card-col">
 				<article class="c-case-study-card c-case-study-card--geckotree">
 	<a href="geckotree.html" class="c-case-study-card__link">
-		<header class="c-case-study-card__header">
-			<h2 class="c-case-study-card__heading">Geckotree</h2>
-			<strong class="c-case-study-card__services">Branding, Illustration, Website, Email</strong>
+		<div class="o-section o-wrap o-wrap--x-large">
+			<header class="c-case-study-card__header">
+				<h2 class="c-case-study-card__heading u-alpha">Geckotree</h2>
+				<strong class="c-case-study-card__services u-intro">Branding, Illustration, Website, Email</strong>
 
+				
+				<div class="c-case-study-card__description u-intro">
+					<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>
+				</div>
+				
+			</header>
 			
-			<div class="c-case-study-card__description">
-				<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>
-			</div>
 			
-		</header>
-		
-		
-		<footer class="c-case-study-card__ctas">
-			<span class="c-button c-case-study-card__button">
-				case study
-				<svg class="u-icon u-icon--arrow-right">
-					<use xlink:href="#icon--arrow-right"></use>
-				</svg>
-			</span>
-		</footer>
-		
+			<footer class="c-case-study-card__ctas">
+				<span class="c-button c-button--primary-neutral">
+					case study
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</span>
+			</footer>
+			
+		</div>
 	</a>
 </article>
 			</div>
@@ -200,27 +204,29 @@
 			<div class="c-case-study-card-col">
 				<article class="c-case-study-card c-case-study-card--adspy">
 	<a href="adspy.html" class="c-case-study-card__link">
-		<header class="c-case-study-card__header">
-			<h2 class="c-case-study-card__heading">OnlineAdSpy</h2>
-			<strong class="c-case-study-card__services">Branding, Illustration, Website</strong>
+		<div class="o-section o-wrap o-wrap--x-large">
+			<header class="c-case-study-card__header">
+				<h2 class="c-case-study-card__heading u-alpha">OnlineAdSpy</h2>
+				<strong class="c-case-study-card__services u-intro">Branding, Illustration, Website</strong>
 
+				
+				<div class="c-case-study-card__description u-intro">
+					<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>
+				</div>
+				
+			</header>
 			
-			<div class="c-case-study-card__description">
-				<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>
-			</div>
 			
-		</header>
-		
-		
-		<footer class="c-case-study-card__ctas">
-			<span class="c-button c-case-study-card__button">
-				case study
-				<svg class="u-icon u-icon--arrow-right">
-					<use xlink:href="#icon--arrow-right"></use>
-				</svg>
-			</span>
-		</footer>
-		
+			<footer class="c-case-study-card__ctas">
+				<span class="c-button c-button--primary-neutral">
+					case study
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</span>
+			</footer>
+			
+		</div>
 	</a>
 </article>
 			</div>
@@ -228,14 +234,16 @@
 			<div class="c-case-study-card-col">
 				<article class="c-case-study-card c-case-study-card--">
 	<a href="" class="c-case-study-card__link">
-		<header class="c-case-study-card__header">
-			<h2 class="c-case-study-card__heading"></h2>
-			<strong class="c-case-study-card__services"></strong>
+		<div class="o-section o-wrap o-wrap--x-large">
+			<header class="c-case-study-card__header">
+				<h2 class="c-case-study-card__heading u-alpha"></h2>
+				<strong class="c-case-study-card__services u-intro"></strong>
 
+				
+			</header>
 			
-		</header>
-		
-		
+			
+		</div>
 	</a>
 </article>
 			</div>
@@ -243,14 +251,16 @@
 			<div class="c-case-study-card-col">
 				<article class="c-case-study-card c-case-study-card--">
 	<a href="" class="c-case-study-card__link">
-		<header class="c-case-study-card__header">
-			<h2 class="c-case-study-card__heading"></h2>
-			<strong class="c-case-study-card__services"></strong>
+		<div class="o-section o-wrap o-wrap--x-large">
+			<header class="c-case-study-card__header">
+				<h2 class="c-case-study-card__heading u-alpha"></h2>
+				<strong class="c-case-study-card__services u-intro"></strong>
 
+				
+			</header>
 			
-		</header>
-		
-		
+			
+		</div>
 	</a>
 </article>
 			</div>
@@ -259,10 +269,56 @@
 </main>
 		</main>
 
+		<footer class="c-footer js-in-page-nav-footer" role="contentinfo">
+    <div class="o-section o-wrap o-wrap--x-large">
+        
+        <div class="c-footer__planner">
+            <h3 class="c-footer__heading">Got a project for us?</h3>
+            
+            <a href="mailto:hello@geckotree.co.uk" class="c-button c-button--primary-neutral">
+                contact
+                <svg class="u-icon u-icon--arrow-right">
+                    <use xlink:href="#icon--arrow-right"></use>
+                </svg>
+            </a>
+        </div>
+        
+
+        <ul class="c-footer__social">
+            
+                <li class="c-footer__social__item">
+                    <a href="https://dribbble.com/geckotree" class="c-footer__social__link c-footer__social__link--dribbble" target="_blank">
+                        <svg class="u-icon u-icon--dribbble">
+                            <use xlink:href="#icon--dribbble"></use>
+                        </svg>
+                        <span class="u-hide-text">Dribbble</span>
+                    </a>
+                </li>
+            
+                <li class="c-footer__social__item">
+                    <a href="https://instagram.com/geckotree" class="c-footer__social__link c-footer__social__link--instagram" target="_blank">
+                        <svg class="u-icon u-icon--instagram">
+                            <use xlink:href="#icon--instagram"></use>
+                        </svg>
+                        <span class="u-hide-text">Instagram</span>
+                    </a>
+                </li>
+            
+                <li class="c-footer__social__item">
+                    <a href="https://twitter.com/geckotree" class="c-footer__social__link c-footer__social__link--twitter" target="_blank">
+                        <svg class="u-icon u-icon--twitter">
+                            <use xlink:href="#icon--twitter"></use>
+                        </svg>
+                        <span class="u-hide-text">Twitter</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+</footer>
+
 		<div class="u-icons">@@icons</div>
-		<!-- @todo figure out why this isnt getting merged into main -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="assets/js/libs/modernizr.js"></script>
 		<script src="assets/build/js/main.js"></script>
 		<script>@@googleAnalytics</script>
 	</body>

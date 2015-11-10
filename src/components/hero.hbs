@@ -1,0 +1,55 @@
+{{#if two-col}}
+<header class="c-hero c-hero--two-col{{#if cover}} c-hero--cover{{/if}}">
+	<div class="c-hero__row o-section o-wrap o-wrap--x-large">
+		<div class="c-hero__content">
+			<h1 class="c-hero__heading{{#if headingClass}} {{headingClass}}{{/if}}">{{{heading}}}</h1>
+			{{#if meta}}<strong class="c-hero__meta u-intro">{{meta}}</strong>{{/if}}
+
+			<div class="c-hero__description u-intro">
+				{{{description}}}
+			</div>
+
+			{{#if cta}}
+			<div class="c-hero__cta">
+				<a href="{{ctaUrl}}" class="c-button c-button--secondary">
+					{{cta}}
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</a>
+			</div>
+			{{/if}}
+		</div>
+
+		<figure class="c-hero__figure">
+			<img src="{{image}}" alt="{{alt}}">
+		</figure>
+	</div>
+</header>
+{{/if}}
+
+{{#if cover}}
+<header class="c-hero c-hero--cover">
+	<div class="c-hero__row o-section o-wrap o-wrap--x-large">
+		<div class="c-hero__content">
+			<h1 class="c-hero__heading{{#if headingClass}} {{headingClass}}{{/if}}">{{{heading}}}</h1>
+			{{#if meta}}<strong class="c-hero__meta u-intro">{{meta}}</strong>{{/if}}
+
+			<div class="c-hero__description u-intro">
+				{{{description}}}
+			</div>
+
+			{{#if cta}}
+			<div class="c-hero__cta">
+				<a href="{{ctaUrl}}" class="c-button c-button--primary-neutral">
+					{{cta}}
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</a>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+</header>
+{{/if}}

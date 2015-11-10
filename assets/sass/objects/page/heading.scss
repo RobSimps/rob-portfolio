@@ -6,10 +6,10 @@
 
 .o-page-heading {
 	padding-top: $padding-small * 1.5;
-}
 
-.o-page-heading__description {
-	color: $dark-3;
+	.u-highlight-text {
+		color: $white;
+	}
 }
 
 @include respond-max( $mq-small ) {
@@ -49,16 +49,18 @@
 	}
 
 	.o-page-heading--two-col {
+		background: $purple-1;
+
 		.o-page-heading__row {
 			@include clearfix;
 		}
 
 		.o-page-heading__content {
-			float: left;
+			float: right;
 			width: 50%;
 		}
 		.o-page-heading__figure {
-			float: right;
+			float: left;
 			width: 45%;
 		}
 
@@ -70,6 +72,7 @@
 
 @include respond-min( $mq-x-large ) {
 	.o-page-heading {
+		padding-bottom: $padding-large * 1.5;
 		padding-top: $padding-large * 1.5;
 	}
 }

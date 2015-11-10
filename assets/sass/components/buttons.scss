@@ -6,6 +6,8 @@
 
 .c-button {
 	border-radius: $border-radius * 100;
+	border-style: solid;
+	border-width: $border-width;
 	display: inline-block;
 	font-weight: $bold;
 	line-height: 1;
@@ -36,7 +38,7 @@
 
 .c-button--primary {
 	background: $pri;
-	border: $border-width solid $pri;
+	border-color: $pri;
 	color: $white;
 
 	&:hover,
@@ -48,7 +50,7 @@
 }
 
 .c-button--secondary {
-	border: $border-width solid $pri;
+	border-color: $pri;
 	color: $pri;
 
 	.u-icon--arrow-right {
@@ -63,6 +65,25 @@
 
 		.u-icon--arrow-right {
 			fill: $white;
+		}
+	}
+}
+
+.c-button--primary-neutral {
+	border-color: $white;
+	color: $white;
+
+	.u-icon--arrow-right {
+		fill: $white;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $dark-1;
+		color: $dark-1;
+
+		.u-icon--arrow-right {
+			fill: $dark-1;
 		}
 	}
 }

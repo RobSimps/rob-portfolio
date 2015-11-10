@@ -28,17 +28,18 @@
 	color: $pri;
 }
 
-.s-blog,
-.s-blog-article {
-	.c-footer {
-		.o-section {
-			padding-top: 0;
-		}
-	}
+.u-highlight-text-neutral {
+	color: $text-colour;
 }
 
 @include respond-max( $mq-small ) {
 	.u-hide-mobile {
 		display: none;
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.u-wrap-large {
+		display: block;
 	}
 }

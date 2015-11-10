@@ -4,7 +4,7 @@
         <div class="c-footer__planner">
             <h3 class="c-footer__heading">{{{heading}}}</h3>
             
-            <a href="{{url}}" class="c-button c-button--secondary">
+            <a href="{{url}}" class="c-button c-button--primary-neutral">
                 {{button}}
                 <svg class="u-icon u-icon--arrow-right">
                     <use xlink:href="#icon--arrow-right"></use>
@@ -16,7 +16,7 @@
         <ul class="c-footer__social">
             {{#each social}}
                 <li class="c-footer__social__item">
-                    <a href="{{url}}" class="c-footer__social__link" target="_blank">
+                    <a href="{{url}}" class="c-footer__social__link c-footer__social__link--{{icon}}" target="_blank">
                         <svg class="u-icon u-icon--{{icon}}">
                             <use xlink:href="#icon--{{icon}}"></use>
                         </svg>
