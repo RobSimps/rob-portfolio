@@ -9,7 +9,7 @@ select,
 textarea {
 	background: none;
 	border: none;
-	border-bottom: $border-width solid $border-colour;
+	border-bottom: $border-width * 1.5 solid $border-colour;
 	border-radius: 0;
 	padding: 0;
 	transition: border $speed ease;
@@ -17,14 +17,6 @@ textarea {
 
 	&:focus {
 		border-color: $sec;
-	}
-
-	.is-valid & {
-		border-color: $success;
-	}
-
-	.is-invalid & {
-		border-color: $error;
 	}
 
 	.is-disabled & {

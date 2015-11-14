@@ -1,10 +1,10 @@
 'use strict';
 module.exports = {
 	svgImages: {
-		files: [{
-			cwd: '<%= assetsBuildFolder %>/img/',
+		files: [ {
+			cwd: '<%= buildFolder %>/<%= assetsFolder %>/img/',
 			src: [ '**/*.svg' ],
-			dest: '<%= assetsBuildFolder %>/img/'
-		}]
+			dest: '<%= buildFolder %>/<%= assetsFolder %>/img/'
+		} ]
 	}
 };

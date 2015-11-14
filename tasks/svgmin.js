@@ -1,19 +1,21 @@
 'use strict';
 module.exports = {
 	options: {
-		plugins: [
-			{ removeViewBox: false },
-			{ removeUselessStrokeAndFill: true },
-			{ removeEmptyAttrs: true }
-		]
+		plugins: [ {
+			removeViewBox: false
+		}, {
+			removeUselessStrokeAndFill: true
+		}, {
+			removeEmptyAttrs: true
+		} ]
 	},
 	svgImages: {
-		files: [{
+		files: [ {
 			expand: true,
-			cwd: '<%= assetsBuildFolder %>/img/**',
+			cwd: '<%= buildFolder %>/<%= assetsFolder %>/img/**',
 			src: '*.svg',
-			dest: '<%= assetsBuildFolder %>/img',
+			dest: '<%= buildFolder %>/<%= assetsFolder %>/img',
 			ext: '.svg'
-		}]
+		} ]
 	}
 };

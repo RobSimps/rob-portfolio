@@ -1,0 +1,75 @@
+---
+layout: site
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<article class="c-article" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="o-wrap o-wrap--x-large">
+		<header class="c-article__header">
+			<h1 class="c-article__heading u-tera" itemprop="headline">{{ page.blogTitle }}</h1>
+
+			<ul class="c-listing__meta-data c-listing__meta-data--large">
+				<li class="c-listing__meta-data__item c-listing__meta-data__item--large">
+					<time datetime="{{ post.date | date: '%Y-%m-%d%T' }}" pubdate="pubdate">
+						{% assign d = post.date | date: "%-d" %}
+						{% case d %}
+							{% when '1' or '21' or '31' %}{{ d }}<sup>st</sup>
+							{% when '2' or '22' %}{{ d }}<sup>nd</sup>
+							{% when '3' or '23' %}{{ d }}<sup>rd</sup>
+							{% else %}{{ d }}<sup>th</sup>
+						{% endcase %}
+						{{ post.date | date: "%b %Y" }}
+					</time>
+					<meta itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%d' }}">
+				</li>
+				<li class="c-listing__meta-data__item c-listing__meta-data__item--large u-hide-mobile" itemprop="author">{{ author.name }}</li>
+				<li class="c-listing__meta-data__item c-listing__meta-data__item--large">9mins to read</li>
+			</ul>
+		</header>
+	</div>
+
+	<div class="o-wrap o-wrap--medium s-free-content" itemprop="articleBody">
+		<p class="intro">{{ page.exerpt }}</p>
+
+		{{ content }}
+	</div>
+</article>
+
+<div class="o-section o-wrap o-wrap--large c-listings--side-by-side">
+	<article class="o-wrap c-listing c-listing--side-by-side c-listing--prev" itemscope itemtype="http://schema.org/Blog">
+		<a href="" class="c-listing__link c-listing--side-by-side__link c-listing--prev__link" itemprop="url" title="">
+			<h3 class="c-listing__heading c-listing--side-by-side__heading gamma" itemprop="name">Faster font loading with <span class="u-highlight-text">font events</span></h3>
+
+			<ul class="c-listing__meta-data c-listing--side-by-side__list-meta">
+				<li class="c-listing__meta-data__item c-listing--side-by-side__item-meta">Prev Post</li>
+				<li class="c-listing__meta-data__item c-listing__meta-data__item--visited">
+					<span class="c-listing__visited-text">Seen</span>
+					<span class="c-listing__visited-badge">
+						<svg class="u-icon u-icon--check">
+							<use xlink:href="#icon--check"></use>
+						</svg>
+					</span>
+				</li>
+			</ul>
+		</a>
+	</article>
+
+	<article class="o-wrap c-listing c-listing--side-by-side c-listing--next" itemscope itemtype="http://schema.org/Blog">
+		<a href="" class="c-listing__link c-listing--side-by-side__link c-listing--next__link" itemprop="url" title="">
+			<h3 class="c-listing__heading c-listing--side-by-side__heading gamma" itemprop="name">Responsible <span class="u-highlight-text">social share links</span></h3>
+
+			<ul class="c-listing__meta-data c-listing--side-by-side__meta-data">
+				<li class="c-listing__meta-data__item c-listing--side-by-side__meta-data__item">Next Post</li>
+				<li class="c-listing__meta-data__item c-listing__meta-data__item--visited">
+					<span class="c-listing__visited-text">Seen</span>
+					<span class="c-listing__visited-badge">
+						<svg class="u-icon u-icon--check">
+							<use xlink:href="#icon--check"></use>
+						</svg>
+					</span>
+				</li>
+			</ul>
+		</a>
+	</article>
+</div>

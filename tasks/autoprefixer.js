@@ -7,7 +7,7 @@ module.exports = {
 	prefix: {
 		expand: true,
 		flatten: true,
-		src: '<%= assetsBuildFolder %>/css/style.css',
-		dest: '<%= assetsBuildFolder %>/css'
+		src: '<%= buildFolder %>/<%= assetsFolder %>/css/style.css',
+		dest: '<%= buildFolder %>/<%= assetsFolder %>/css'
 	}
 };

@@ -16,10 +16,6 @@ $images: 	'#{$base-dir}/img';
 
 =========================================================== */
 
-
-$red:				red;
-$green:				green;
-
 $light-1:			#F7F7F7;
 $light-2:			#EFEFEF; // @todo update?
 $light-3:			#DEDEDE; // @todo update?
@@ -34,12 +30,20 @@ $pri-light:			#DDF0E3;
 $white: 			#FFFFFF;
 $black: 			#000000;
 
+$light-1:			#FAF8F5;
+$light-2:			#F2F0ED;
+$light-3:			#EDEBE6;
 $dark-1:			#2D2D2D;
 
+$green-1:			#57B275;
+$blue-1:			#07ABCA;
 $purple-1:			#8682d7;
+$orange-1:			#F49E39;
+$pink-1:			#F05D71;
+$red-1:				#EC4E50;
 
-$pri:				#57B275;
-$sec:				#F05D71;
+$pri:				$green-1;
+$sec:				$pink-1;
 $ter:				#F0C83A;
 
 $twitter: 			#55ACEE;
@@ -86,8 +90,8 @@ $link-colour-hover:		$sec;
 $placeholder-colour:	$light-3;
 $highlight-colour:		lighten( $pri, 20 );
 
-$error:					$red;
-$success:				$green;
+$error:					$red-1;
+$success:				$green-1;
 $disabled:				$light-1;
 
 $padding-small:			6rem;

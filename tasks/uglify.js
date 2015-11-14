@@ -2,13 +2,13 @@
 module.exports = {
 	all: {
 		files: {
-			'<%= assetsBuildFolder %>/js/main.js': '<%= assetsBuildFolder %>/js/main.js'
+			'<%= buildFolder %>/<%= assetsFolder %>/js/main.js': '<%= assetsBuildFolder %>/js/main.js'
 		}
 	},
 	inline: {
 		files: {
-			'<%= assetsBuildFolder %>/js/libs/loadFont.js': '<%= assetsFolder %>/js/libs/loadFont.js',
-			'<%= assetsBuildFolder %>/js/libs/googleAnalytics.js': '<%= assetsFolder %>/js/libs/googleAnalytics.js'
+			'<%= buildFolder %>/<%= assetsFolder %>/js/libs/loadFont.js': '<%= assetsFolder %>/js/libs/loadFont.js',
+			'<%= buildFolder %>/<%= assetsFolder %>/js/libs/googleAnalytics.js': '<%= assetsFolder %>/js/libs/googleAnalytics.js'
 		}
 	}
 };

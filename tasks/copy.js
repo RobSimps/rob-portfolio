@@ -6,7 +6,16 @@ module.exports = {
 			expand: true,
 			cwd: '<%= assetsFolder %>/img',
 			src: '**/*',
-			dest: '<%= assetsBuildFolder %>/img/'
+			dest: '<%= buildFolder %>/<%= assetsFolder %>/img/'
+		} ]
+	},
+	js: {
+		files: [ {
+			flatten: false,
+			expand: true,
+			cwd: '<%= assetsFolder %>/bower_components/html5shiv/dist/',
+			src: 'html5shiv.min.js',
+			dest: '<%= buildFolder %>/<%= assetsFolder %>/js/libs/'
 		} ]
 	}
 };

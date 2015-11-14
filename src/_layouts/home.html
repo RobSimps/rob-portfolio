@@ -1,0 +1,16 @@
+<!doctype html>
+<!--[if lte IE 9]> <html lang="en" class="{{ page.class }} no-enhance lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" class="{{ page.class }} no-enhance"> <!—<![endif]-->
+	<head>
+			{% include head.html %}
+		</head>
+		<body class="o-page">
+			{% include header.html %}
+
+			<main class="o-page__content js-page-content" role="main">
+				{{ content }}
+			</main>
+
+			{% include foot.html %}
+		</body>
+</html>

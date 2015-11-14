@@ -1,0 +1,35 @@
+/* ===========================================================
+
+	# Hero - Cover
+
+=========================================================== */
+
+//@todo vh unit
+.flexbox {
+	.c-hero--cover {
+		min-height: 100vh;
+		min-height: calc( 100vh - 7rem );
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.flexbox {
+		.c-hero--cover {
+			align-items: center;
+			display: flex;
+		}
+
+		.c-hero__row {
+			flex-grow: 1;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	//@todo vh unit
+	.flexbox {
+		.c-hero--cover {
+			min-height: calc( 100vh - 8.8rem );
+		}
+	}
+}

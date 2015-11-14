@@ -1,0 +1,51 @@
+/* ===========================================================
+
+	# Forms - Validation
+
+=========================================================== */
+
+.o-input-wrap {
+	position: relative;
+}
+
+.o-validation {
+	border-radius: 100%;
+	margin-top: -1.6rem;
+	opacity: 0;
+	padding: .3rem .8rem 0;
+	position: absolute;
+	right: 0;
+	transition: background $speed ease,
+				opacity $speed ease,
+				visibility $speed ease;
+	top: 50%;
+	visibility: hidden;
+
+	.u-icon {
+		@include icon( $light-1, 1.2rem, 1.2rem );
+	}
+
+	.is-valid & {
+		background: $success;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.is-invalid & {
+		background: $error;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.o-validation {
+		margin-top: -1.8rem;
+		padding: .2rem .8rem 0;
+
+		.u-icon {
+			height: 1.6rem;
+			width: 1.6rem;
+		}
+	}
+}

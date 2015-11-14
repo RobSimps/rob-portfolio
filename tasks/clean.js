@@ -1,9 +1,9 @@
 'use strict';
 module.exports = {
 	icons: {
-		src: [ '<%= assetsBuildFolder %>/img/icons' ]
+		src: [ '<%= buildFolder %>/<%= assetsFolder %>/img/icons' ]
 	},
 	site: {
-		src: [ '*.html' ]
+		src: [ '<%= buildFolder %>/*.html' ]
 	}
 };

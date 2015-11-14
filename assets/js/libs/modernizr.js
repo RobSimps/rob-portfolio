@@ -1,5 +1,5 @@
 /* Modernizr (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-cssclasses-svg-csstransitions-csstransforms-cssanimations-opacity-flexbox-touch
+ * Build: http://modernizr.com/download/#-cssclasses-svg-csstransitions-csstransforms-opacity-flexbox-touch
  */
 ;
 
@@ -220,14 +220,6 @@ window.Modernizr = (function( window, document, undefined ) {
 
                     return (/^0.55$/).test(mStyle.opacity);
     };
-
-
-    tests['cssanimations'] = function() {
-        return testPropsAll('animationName');
-    };
-
-
-
     tests['csstransforms'] = function() {
         return !!testPropsAll('transform');
     };    tests['csstransitions'] = function() {

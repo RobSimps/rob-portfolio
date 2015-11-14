@@ -1,0 +1,51 @@
+/* ===========================================================
+
+	# Home
+
+=========================================================== */
+
+.s-home {
+	.c-hero {
+		background-color: $pri;
+		background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
+		background-position: bottom -10rem right -25rem;
+		background-repeat: no-repeat;
+		background-size: 150%;
+	}
+
+	.c-hero__heading {
+		color: $white;
+	}
+
+	.c-hero__description {
+		color: $white;
+		color: rgba( $white, .85 );
+	}
+
+	&.cssanimations {
+		.c-hero__heading,
+		.c-hero__description,
+		.c-hero__cta {
+			animation: fade-in-up $speed * 2 backwards;
+		}
+
+		.c-hero__heading {
+		  	animation-delay: .3s;
+		}
+
+		.c-hero__description {
+		  	animation-delay: .4s;
+		}
+
+		.c-hero__cta {
+		  	animation-delay: .5s;
+		}
+	}
+
+	@include respond-min( $mq-medium ) {
+		.c-hero {
+			background-position: right -20rem center;
+			background-size: 80%;
+		}
+	}
+}

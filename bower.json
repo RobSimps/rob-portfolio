@@ -1,12 +1,17 @@
 {
-  "name": "rob-portfolio",
+  "name": "gko-website",
   "version": "1.0.0",
-  "homepage": "http://robsimpson.me",
+  "homepage": "http://geckotree.co.uk",
   "authors": [
     {
       "name": "Rob Simpson",
-      "homepage": "http://robsimpson.me",
-      "email": "<hello@robsimpson.me>"
+      "homepage": "http://geckotree.co.uk",
+      "email": "<rob@geckotree.co.uk>"
+    },
+    {
+      "name": "Kev Simpson",
+      "homepage": "http://geckotree.co.uk",
+      "email": "<kev@geckotree.co.uk>"
     }
   ],
   "devDependencies": {
@@ -14,6 +19,9 @@
     "html5shiv": "~3.7.2",
     "modernizr": "~2.8.3",
     "scrollMonitor": "~1.0.10",
-    "jribbble": "~2.0.4"
+    "jribbble": "~2.0.4",
+    "turbolinks": "https://github.com/rails/turbolinks.git#~2.5.3",
+    "snap.svg": "~0.4.1",
+    "email-autocomplete": "https://github.com/10w042/email-autocomplete.git#~0.1.0"
   }
 }

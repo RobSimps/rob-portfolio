@@ -4,15 +4,23 @@
 
 =========================================================== */
 
-// .c-footer {
-// 	text-align: center;
-// }
-
-// .c-footer__planner + .c-footer__social {
-// 	margin-top: $padding-medium;
-// }
 .c-footer {
-	background: $adspy-pri;
+	background: $pri;
+	background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
+	background-repeat: no-repeat;
+	transition: background-color $speed * 2 ease;
+
+	&.is-twitter {
+		background-color: $twitter;
+	}
+
+	&.is-dribbble {
+		background-color: $dribbble;
+	}
+
+	&.is-instagram {
+		background-color: $instagram;
+	}
 }
 
 .c-footer__heading {
@@ -23,52 +31,63 @@
 	list-style: none;
 
 	.u-icon {
-		@include icon( $white, 3.2rem, 3.2rem );
+		@include icon( $white, 2.8rem, 2.8rem );
 	}
 }
 
 .c-footer__social__item {
 	display: inline-block;
-	margin: 0 2rem;
+	margin: 0 1.5rem;
 }
 
 .c-footer__social__link {
 	border: $border-width solid $white;
 	border-radius: 100%;
 	display: block;
-	padding: 1.5rem 1.5rem .7rem;
+	height: 5.8rem;
+	padding: 1.3rem 1rem .5rem;
+	position: relative;
+	text-align: center;
 	transition: border $speed ease;
+	width: 5.8rem;
+}
 
-	&:hover,
-	&:focus {
-		&.c-footer__social__link--twitter {
-			border-color: $dark-1;
-		}
+@include respond-min-max( $mq-small, $mq-large ) {
+	.c-footer {
+		background-size: 110%;
+	}
+}
 
-		&.c-footer__social__link--dribbble {
-			border-color: $dark-1;
+@include respond-min( $mq-medium ) {
+	.c-footer__social {
+		.u-icon {
+			height: 3.2rem;
+			width: 3.2rem;
 		}
+	}
 
-		&.c-footer__social__link--instagram {
-			border-color: $dark-1;
-		}
+	.c-footer__social__link {
+		height: 7rem;
+		padding: 1.7rem 1rem .9rem;
+		width: 7rem;
+	}
+}
 
-		.u-icon--twitter {
-			fill: $dark-1;
-		}
+@include respond-max( $mq-large ) {
+	.c-footer {
+		background-position: center;
+		text-align: center;
+	}
 
-		.u-icon--dribbble {
-			fill: $dark-1;
-		}
-
-		.u-icon--instagram {
-			fill: $dark-1;
-		}
+	.c-footer__social {
+		margin-top: $line-height * 1.5;
 	}
 }
 
 @include respond-min( $mq-large ) {
 	.c-footer {
+		background-position: left -25% center;
+		background-size: 50%;
 		position: relative;
 
 		.o-section {
@@ -76,18 +95,6 @@
 			padding-bottom: $padding-large;
 			padding-top: $padding-large;
 		}
-
-		// &:after {
-		// 	background: rgba( $black, .1 );
-		// 	border-radius: 0 $border-radius * 100 $border-radius * 100 0;
-		// 	content: '';
-		// 	height: 100%;
-		// 	left: 0;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	width: 60%;
-		// 	z-index: -1;
-		// }
 	}
 
 	.c-footer__planner {
@@ -96,15 +103,18 @@
 
 	.c-footer__social {
 		float: right;
+		margin-top: .7rem;
 	}
 
 	.c-footer__heading {
 		display: inline-block;
-		margin-right: 4rem;
+		margin-right: 2rem;
+		padding-bottom: 0;
+		transform: translateY( .5rem );
 	}
 
 	.no-touch {
-		margin-bottom: 300px;
+		margin-bottom: 306px;
 
 		.c-footer {
 			bottom: 0;
@@ -112,5 +122,19 @@
 			width: 100%;
 			z-index: -1;
 		}
+
+		&.s-home {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include respond-min( $mq-x-large ) {
+	.c-footer__heading {
+		margin-right: 4rem;
+	}
+
+	.c-footer__social__item {
+		margin: 0 2rem;
 	}
 }

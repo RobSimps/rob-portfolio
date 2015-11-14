@@ -11,7 +11,7 @@
 	display: inline-block;
 	font-weight: $bold;
 	line-height: 1;
-	padding: 1.3rem 2rem;
+	padding: 1.5rem 2.5rem;
 	transition: background $speed ease,
 				border-color $speed ease,
 				color $speed ease,
@@ -20,15 +20,7 @@
 	.u-icon--arrow-right {
 		@include icon( $white, 1rem, .8rem );
 		margin-left: $padding-small / 8;
-		transition: fill $speed ease,
-					transform $speed ease;
-	}
-
-	&:hover,
-	&:focus {
-		.u-icon--arrow-right {
-			transform: translateX( .4rem );
-		}
+		transform: translate( 0, -.2rem );
 	}
 
 	&:active {
@@ -72,6 +64,7 @@
 .c-button--primary-neutral {
 	border-color: $white;
 	color: $white;
+	position: relative;
 
 	.u-icon--arrow-right {
 		fill: $white;
@@ -79,28 +72,95 @@
 
 	&:hover,
 	&:focus {
-		border-color: $dark-1;
-		color: $dark-1;
-
-		.u-icon--arrow-right {
-			fill: $dark-1;
-		}
+		color: $white;
 	}
 }
 
-.c-button--disabled {
-	background: $border-colour;
-	color: $black;
-	cursor: not-allowed;
+// .c-button--disabled {
+// 	background: $border-colour;
+// 	color: $black;
+// 	cursor: not-allowed;
 
-	&:hover,
-	&:focus {
-		color: $black;
-	}
-}
+// 	&:hover,
+// 	&:focus {
+// 		color: $black;
+// 	}
+// }
 
 @include respond-min( $mq-medium ) {
 	.c-button {
 		padding: 2rem 3rem;
+	}
+}
+
+@include respond-max( $mq-large ) {
+	.svg {
+		.c-button__morph-shape {
+			display: none;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.svg {
+		.c-button {
+			border: none;
+			padding: 2.5rem 3.5rem;
+			position: relative;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-webkit-tap-highlight-color: transparent; /* For some Androids */
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.c-button__text {
+			display: block;
+			padding: .6rem;
+			position: relative;
+			text-align: center;
+			z-index: 100;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.c-button__morph-shape {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+
+		.c-button--primary {
+			background: transparent;
+
+			.c-button__morph-shape svg {
+				fill: $pri;
+			}
+
+			&:hover,
+			&:focus {
+				.c-button__morph-shape svg {
+					fill: $sec;
+				}
+			}
+		}
+
+		.c-button--primary-neutral {
+			.c-button__morph-shape svg {
+				fill: none;
+				stroke: $white;
+				stroke-width: $border-width * 2;
+				stroke-linecap: round;
+			}
+		}
 	}
 }

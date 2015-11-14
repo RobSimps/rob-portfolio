@@ -16,8 +16,8 @@ module.exports = function( grunt ) {
 	var vars = {
 		pkg: grunt.file.readJSON( 'package.json' ),
 		assetsFolder: 'assets',
-		assetsBuildFolder: 'assets/build',
-		siteFolder: 'src'
+		srcFolder: 'src',
+		buildFolder: 'build'
 	};
 
 	/*
@@ -35,9 +35,10 @@ module.exports = function( grunt ) {
 	 * Define tasks
 	 */
 	grunt.registerTask( 'dev', [
+		'replace',
+		'jekyll',
 		'css:dev',
 		'js:dev',
-		'assemble',
 		'images:dev',
 		'todo',
 		'browserSync',
@@ -45,6 +46,8 @@ module.exports = function( grunt ) {
 	] );
 
 	grunt.registerTask( 'build', [
+		'replace',
+		'jekyll',
 		'css:build',
 		'js:build',
 		'icons',
@@ -71,7 +74,8 @@ module.exports = function( grunt ) {
 		'modernizr',
 		'concat',
 		'jshint',
-		'uglify:inline'
+		'uglify:inline',
+		'copy:js'
 	] );
 
 	grunt.registerTask( 'js:build', [
@@ -82,7 +86,6 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'images:dev', [
 		'copy:images',
 		'clean:icons',
-		'svgstore',
-		'replace'
+		'svgstore'
 	] );
 };

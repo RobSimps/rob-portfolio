@@ -1,0 +1,27 @@
+/* ===========================================================
+
+	# Forms - Base
+
+=========================================================== */
+
+.o-form__field {
+	& + & {
+		padding-top: $padding-medium;
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.o-form__field {
+		& + & {
+			padding-top: $padding-large;
+		}
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.o-form__field {
+		& + & {
+			padding-top: $padding-large * 1.5;
+		}
+	}
+}

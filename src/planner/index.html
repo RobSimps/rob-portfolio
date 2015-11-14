@@ -1,0 +1,256 @@
+---
+title: Planner
+class: s-planner
+layout: master
+---
+
+<header class="c-hero">
+	<div class="c-hero__row o-section o-wrap o-wrap--x-large">
+		<div class="c-hero__content">
+			<h1 class="c-hero__heading">Planner</h1>
+
+			<div class="c-hero__description u-intro">
+				<p>Stop searching for the best technology companies in the Dallas/Fort Worth area, when you sign up we’ll send you our comprehensive list.</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="o-section o-wrap o-wrap--medium">
+	<form action="//formspree.io/{{ site.email }}" method="POST">
+		<div class="o-form__field" data-module="Validation">
+			<label class="o-label u-delta" for="gko-name">
+				<svg class="u-icon u-icon--user">
+                    <use xlink:href="#icon--user"></use>
+                </svg>
+				What is your <span class="u-highlight-text">name</span>?
+			</label>
+			<div class="o-input-wrap">
+				<input class="o-input u-alpha" name="name" id="gko-name" type="text" placeholder="Rob Simpson" required autocomplete="off">
+				<span class="o-validation">
+					<svg class="u-icon u-icon--check">
+	                    <use xlink:href="#icon--check"></use>
+	                </svg>
+				</span>
+			</div>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<label class="o-label u-delta" for="gko-company">
+				<svg class="u-icon u-icon--company">
+                    <use xlink:href="#icon--company"></use>
+                </svg>
+				What is your <span class="u-highlight-text">company name</span>?
+			</label>
+			<div class="o-input-wrap">
+				<input class="o-input u-alpha" name="company" id="gko-company" type="text" placeholder="Geckotree" required autocomplete="off">
+				<span class="o-validation">
+					<svg class="u-icon u-icon--check">
+	                    <use xlink:href="#icon--check"></use>
+	                </svg>
+				</span>
+			</div>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<label class="o-label u-delta" for="gko-email">
+				<svg class="u-icon u-icon--send">
+                    <use xlink:href="#icon--send"></use>
+                </svg>
+				What is your <span class="u-highlight-text">email</span> address?
+			</label>
+			<div class="o-input-wrap">
+				<input class="o-input u-alpha" name="_replyto" id="gko-email" type="email" placeholder="hello@geckotree.co.uk" required autocomplete="off">
+				<span class="o-validation">
+					<svg class="u-icon u-icon--check">
+	                    <use xlink:href="#icon--check"></use>
+	                </svg>
+				</span>
+			</div>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<fieldset class="o-fieldset">
+				<legend class="o-label u-delta">
+					<svg class="u-icon u-icon--coffee">
+	                    <use xlink:href="#icon--coffee"></use>
+	                </svg>
+					What <span class="u-highlight-text">services</span> do you require?
+				</legend>
+				<ul class="o-fieldset__list">
+					<li class="o-fieldset__item">
+						<input name="services" id="gko-service-web" type="checkbox" value="Web &amp; interface" required>
+						<label class="o-fieldset__label o-fieldset__label--checkbox" for="gko-service-web">Web &amp; interface</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="services" id="gko-service-illustration" type="checkbox" value="Illustration" required>
+						<label class="o-fieldset__label o-fieldset__label--checkbox" for="gko-service-illustration">Illustration</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="services" id="gko-service-emailer" type="checkbox" value="Emailer" required>
+						<label class="o-fieldset__label o-fieldset__label--checkbox" for="gko-service-emailer">Emailer</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<fieldset class="o-fieldset">
+				<legend class="o-label u-delta">
+					<svg class="u-icon u-icon--stamp">
+	                    <use xlink:href="#icon--stamp"></use>
+	                </svg>
+					Will you need us for <span class="u-highlight-text">design</span> and <span class="u-highlight-text">code</span>?
+				</legend>
+				<ul class="o-fieldset__list">
+					<li class="o-fieldset__item">
+						<input name="services" id="gko-service-design" type="checkbox" value="Design" required>
+						<label class="o-fieldset__label o-fieldset__label--checkbox" for="gko-service-design">Design</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="services" id="gko-service-code" type="checkbox" value="Code" required>
+						<label class="o-fieldset__label o-fieldset__label--checkbox" for="gko-service-code">Code</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+
+		<div class="o-form__field js-service-web" data-module="Validation">
+			<label class="o-label u-delta" for="gko-wesbite">
+				<svg class="u-icon u-icon--globe">
+                    <use xlink:href="#icon--globe"></use>
+                </svg>
+				Do you have an existing <span class="u-highlight-text">website</span>?
+			</label>
+			<div class="o-input-wrap">
+				<input class="o-input u-alpha" name="website" id="gko-wesbite" type="url" autocomplete="off" value="http://">
+				<span class="o-validation">
+					<svg class="u-icon u-icon--check">
+	                    <use xlink:href="#icon--check"></use>
+	                </svg>
+				</span>
+			</div>
+		</div>
+
+		<div class="o-form__field js-service-web" data-module="Validation">
+			<fieldset class="o-fieldset">
+				<legend class="o-label u-delta">
+					<svg class="u-icon u-icon--page">
+	                    <use xlink:href="#icon--page"></use>
+	                </svg>
+					How many <span class="u-highlight-text">pages</span> will need designing / building?
+				</legend>
+				<ul class="o-fieldset__list">
+					<li class="o-fieldset__item">
+						<input name="pages" id="gko-pages-1-5" type="radio" value="1 - 5 pages" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-pages-1-5">1 - 5 pages</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="pages" id="gko-pages-5-10" type="radio" value="5 - 10 pages" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-pages-5-10">5 - 10 pages</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="pages" id="gko-pages-10-15" type="radio" value="10 - 15+ pages" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-pages-10-15">10 - 15+ pages</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="pages" id="gko-pages-not-sure" type="radio" value="Not sure" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-pages-not-sure">Not sure</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<fieldset class="o-fieldset">
+				<legend class="o-label u-delta">
+					<svg class="u-icon u-icon--calendar">
+	                    <use xlink:href="#icon--calendar"></use>
+	                </svg>
+					What is your <span class="u-highlight-text">deadline</span>?
+				</legend>
+				<ul class="o-fieldset__list">
+					<li class="o-fieldset__item">
+						<input name="deadline" id="gko-deadline-under-1-month" type="radio" value="Less than 1 month" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-deadline-under-1-month">Less than 1 month</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="deadline" id="gko-deadline-1-2-months" type="radio" value="1 - 2 months" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-deadline-1-2-months">1 - 2 months</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="deadline" id="gko-deadline-2-3-months" type="radio" value="2 - 3 months" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-deadline-2-3-months">2 - 3+ months</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="deadline" id="gko-deadline-not-sure" type="radio" value="Not sure" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-deadline-not-sure">Not sure</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+
+		<div class="o-form__field" data-module="Validation">
+			<fieldset class="o-fieldset">
+				<legend class="o-label u-delta">
+					<svg class="u-icon u-icon--piggybank">
+	                    <use xlink:href="#icon--piggybank"></use>
+	                </svg>
+					What is your <span class="u-highlight-text">budget</span>?
+				</legend>
+				<ul class="o-fieldset__list">
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-under-1000" type="radio" value="Less than £1,000" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-under-1000">Less than £1,000</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-1000-2500" type="radio" value="£1,000 - £2,500" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-1000-2500">£1,000 - £2,500</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-2500-5000" type="radio" value="£2,500 - £5,000" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-2500-5000">£2,500 - £5,000</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-5000-7500" type="radio" value="£5,000 - £7,500" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-5000-7500">£5,000 - £7,500</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-7500-10000" type="radio" value="£7,500 - £10,000" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-7500-10000">£7,500 - £10,000+</label>
+					</li>
+					<li class="o-fieldset__item">
+						<input name="budget" id="gko-budget-not-sure" type="radio" value="Not sure" required>
+						<label class="o-fieldset__label o-fieldset__label--radio" for="gko-budget-not-sure">Not sure</label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+
+		<div class="o-form__field">
+			<label class="o-label u-delta" for="gko-about-project">
+				<svg class="u-icon u-icon--megaphone">
+                    <use xlink:href="#icon--megaphone"></use>
+                </svg>
+				Tell us abit <span class="u-highlight-text">about</span> your project.
+			</label>
+			<textarea name="about" id="gko-about-project" class="o-textarea" cols="30" rows="8" placeholder="This will include examples of the kind of things we're looking for in a project overview." required></textarea>
+		</div>
+
+		<div class="o-form__field">
+			<button class="c-button c-button--primary" data-module="SvgButton" type="submit">
+				<span class="c-button__morph-shape" data-morph-active="M282.5,62.5c0,27.891-17.583,50.176-46.5,53.5c-21.75,2.5-64.355,4-86,4c-21.645,0-65-1-86-4c-29.408-4.201-46.5-25.609-46.5-53.5l0,0C17.5,34.609,36.594,13.177,64,8c22.5-4.25,64.355-4,86-4c21.645,0,64.669,1.31,86,4C263.75,11.5,282.5,34.609,282.5,62.5L282.5,62.5z">
+					<svg width="100%" height="100%" viewBox="0 0 300 125" preserveAspectRatio="none">
+						<path d="M286.5,62.5c0,27.891-22.609,50.5-50.5,50.5c-21.5,0-64.355,0-86,0c-21.645,0-64.5,0-86,0c-27.891,0-50.5-22.609-50.5-50.5l0,0C13.5,34.609,36.109,12,64,12c21.5,0,64.355,0,86,0c21.645,0,64.5,0,86,0C263.891,12,286.5,34.609,286.5,62.5L286.5,62.5z"/>
+					</svg>
+				</span>
+				<span class="c-button__text">
+					send message
+					<svg class="u-icon u-icon--arrow-right">
+						<use xlink:href="#icon--arrow-right"></use>
+					</svg>
+				</span>
+			</button>
+	    </div>
+	</form>
+</div>

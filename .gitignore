@@ -1,5 +1,5 @@
 .sass-cache
+src/.jekyll-metadata
 node_modules
+build
 assets/bower_components
-assets/build
-patterns/build

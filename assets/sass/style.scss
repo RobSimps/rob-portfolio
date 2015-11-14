@@ -23,9 +23,13 @@
 @import 'objects/wrap.scss',
 		'objects/section.scss',
 		'objects/table.scss',
-		'objects/forms.scss',
 		'objects/media.scss',
-		'objects/carousel.scss';
+		'objects/carousel.scss',
+		'objects/forms/base.scss',
+		'objects/forms/validation.scss',
+		'objects/forms/label.scss',
+		'objects/forms/input.scss',
+		'objects/forms/fieldset.scss';
 
 @import 'components/buttons.scss',
 		'components/header.scss',
@@ -36,7 +40,8 @@
 		'components/article.scss',
 		'components/dribbble-shots.scss';
 
-@import 'components/hero/base.scss';
+@import 'components/hero/base.scss',
+		'components/hero/cover.scss';
 
 @import 'components/case-studies/card.scss',
 		'components/case-studies/section/section.scss',
@@ -64,4 +69,9 @@
 @import 'components/planner/services.scss';
 
 @import 'trumps/overrides.scss',
-		'trumps/free-content.scss';
+		'trumps/free-content.scss',
+		'trumps/home.scss',
+		'trumps/work.scss',
+		'trumps/about.scss',
+		'trumps/blog.scss',
+		'trumps/planner.scss';

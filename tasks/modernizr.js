@@ -2,7 +2,7 @@
 module.exports = {
 	main: {
 		'devFile': '<%= assetsFolder %>/bower_components/modernizr/modernizr.js',
-		'outputFile': '<%= assetsFolder %>/js/libs/modernizr.js',
+		'outputFile': '<%= buildFolder %>/<%= assetsFolder %>/js/libs/modernizr.js',
 		'extra': {
 			'printshiv': false,
 			'shiv': false,

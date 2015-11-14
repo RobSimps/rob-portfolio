@@ -1,0 +1,129 @@
+/* ===========================================================
+
+	# Forms - Fieldset
+
+=========================================================== */
+
+.o-fieldset__list {
+	list-style: none;
+}
+
+.o-fieldset__item {
+	margin: 0;
+
+	input {
+		margin: 0 .5rem 0 0;
+		width: auto;
+	}
+}
+
+.o-fieldset__label {
+	background: $light-2;
+	border-radius: $border-radius;
+	padding: 1.5rem 2rem;
+	transition: background $speed * 1.5 ease,
+				color $speed * 1.5 ease;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.enhance {
+	.o-fieldset__item {
+		input {
+			@include hide-text;
+		}
+
+		input:focus + .o-fieldset__label,
+		&.is-checked .o-fieldset__label  {
+			color: $light-1;
+		}
+
+		input:focus + .o-fieldset__label {
+			background: $sec;
+		}
+
+		&.is-checked .o-fieldset__label {
+			background: $green-1!important;
+		}
+	}
+
+	.o-fieldset__label {
+		position: relative;
+
+		&:after {
+			border: $border-width solid rgba( $text-colour, .25 );
+			box-sizing: border-box;
+			content: '';
+			height: 2.6rem;
+			width: 2.6rem;
+			position: absolute;
+			right: 1.7rem;
+			transition: border $speed * 1.5 ease;
+			top: 1.7rem;
+		}
+
+		&:before {
+			content: '';
+			height: 1.4rem;
+			width: 1.4rem;
+			position: absolute;
+			right: 2.3rem;
+			transition: transform $speed * 1.5 $speed / 2 ease;
+			transform: scale( 0 );
+			top: 2.3rem;
+		}
+	}
+
+	.is-checked .o-fieldset__label {
+		&:before {
+			background: $light-3;
+			transform: scale( 1 );
+		}
+
+		&:after {
+			border-color: $light-3;
+		}
+	}
+
+	.o-fieldset__label--checkbox {
+		&:before {
+			border-radius: $border-radius / 2;
+		}
+
+		&:after {
+			border-radius: $border-radius;
+		}
+	}
+
+	.o-fieldset__label--radio {
+		&:before,
+		&:after {
+			border-radius: 100%;
+		}
+	}
+}
+
+@include respond-max( $mq-medium ) {
+	.o-fieldset__item {
+		& + & {
+			margin-top: $line-height / 2;
+		}
+	}
+}
+
+@include respond-min( $mq-medium ) {
+	.o-fieldset__list {
+		@include clearfix;
+		margin-left: -2rem;
+	}
+
+	.o-fieldset__item {
+		float: left;
+		padding-left: 2rem;
+		width: 50%;
+
+		margin-bottom: 2rem; //@todo temp
+	}
+}

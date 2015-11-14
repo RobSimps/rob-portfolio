@@ -1,4 +1,4 @@
-# [TODO list:]( http://robsimpson.me )
+# [TODO list:]( http://geckotree.co.uk )
 
 **Version:** `1.0.0`
 
@@ -27,26 +27,26 @@
 -  **todo** `(line 7)`  creat more responisve sized images
 -  **todo** `(line 8)`  handle retina images
 
-## assets/sass/components/hero.scss
+## assets/sass/components/hero/cover.scss
 
--  **todo** `(line 33)`  prefix under cssvhunit
-
-## assets/sass/components/hero/base.scss
-
--  **todo** `(line 24)`  vh unit
--  **todo** `(line 67)`  vh unit
+-  **todo** `(line 7)`  vh unit
+-  **todo** `(line 29)`  vh unit
 
 ## assets/sass/components/nav.scss
 
--  **todo** `(line 101)`  add when toggle nav
+-  **todo** `(line 96)`  add when toggle nav
 
 ## assets/sass/objects/carousel.scss
 
 -  **todo** `(line 43)`  make this specific to component not object
 -  **todo** `(line 67)`  states
 
+## assets/sass/objects/forms/fieldset.scss
+
+-  **todo** `(line 127)`  temp
+
 ## assets/sass/settings/global.scss
 
--  **todo** `(line 24)`  update?
--  **todo** `(line 25)`  update?
--  **todo** `(line 27)`  update?
+-  **todo** `(line 20)`  update?
+-  **todo** `(line 21)`  update?
+-  **todo** `(line 23)`  update?

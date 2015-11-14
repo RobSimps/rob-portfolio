@@ -6,15 +6,10 @@ module.exports = {
 			sourcemap: true
 		},
 		files: {
-			'<%= assetsBuildFolder %>/css/fonts-woff.css': '<%= assetsFolder %>/sass/fonts-woff.scss',
-			'<%= assetsBuildFolder %>/css/fonts-woff2.css': '<%= assetsFolder %>/sass/fonts-woff2.scss',
-			'<%= assetsBuildFolder %>/css/style.css': '<%= assetsFolder %>/sass/style.scss',
-			'<%= assetsBuildFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
-		}
-	},
-	styleguide: {
-		files: {
-			'<%= styleguideBuildFolder %>/css/style.css': '<%= styleguideFolder %>/sass/style.scss'
+			'<%= buildFolder %>/<%= assetsFolder %>/css/fonts-woff.css': '<%= assetsFolder %>/sass/fonts-woff.scss',
+			'<%= buildFolder %>/<%= assetsFolder %>/css/fonts-woff2.css': '<%= assetsFolder %>/sass/fonts-woff2.scss',
+			'<%= buildFolder %>/<%= assetsFolder %>/css/style.css': '<%= assetsFolder %>/sass/style.scss',
+			'<%= buildFolder %>/<%= assetsFolder %>/css/ie.css': '<%= assetsFolder %>/sass/ie.scss'
 		}
 	}
 };

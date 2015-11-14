@@ -1,0 +1,28 @@
+/* ===========================================================
+
+	# Work
+
+=========================================================== */
+
+.s-work {
+	.c-hero {
+		background-color: $adspy-pri;
+		background-image: url( '#{$images}/case-studies/adspy/adspy-logo.svg');
+		background-position: center bottom -10rem;
+		background-repeat: no-repeat;
+		background-size: 150%;
+	}
+
+	@include respond-min( $mq-small ) {
+		.c-hero {
+			background-size: 125%;
+		}
+	}
+
+	@include respond-min( $mq-medium ) {
+		.c-hero {
+			background-position: left -25% center;
+			background-size: 65%;
+		}
+	}
+}

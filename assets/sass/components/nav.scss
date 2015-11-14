@@ -19,7 +19,8 @@
 
 .c-nav__link {
 	color: $white;
-	transition: color $speed ease,
+	transition: background $speed ease,
+				color $speed ease,
 				transform $speed ease;
 
 	.u-icon {
@@ -43,10 +44,7 @@
 }
 
 .c-nav__link--button {
-	background: $pri;
-	color: $white;
-	transition: background $speed ease,
-				transform $speed ease;
+	position: relative;
 
 	.u-icon {
 		fill: $white;
@@ -54,9 +52,6 @@
 
 	&:hover,
 	&:focus {
-		background: $sec;
-		color: $white;
-
 		.u-icon {
 			fill: $white;
 		}
@@ -150,5 +145,7 @@
 
 	.c-nav__link--button {
 		border-radius: $border-radius * 10;
+		margin-bottom: -.6rem;
+		margin-top: -.6rem;
 	}
 }

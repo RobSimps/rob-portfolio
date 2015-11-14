@@ -3,14 +3,14 @@ module.exports = {
 	dev: {
 		bsFiles: {
 			src: [
-				'assets/build/css/*.css',
-				'assets/build/js/*.js',
-				'*.html'
+				'<%= buildFolder %>/<%= assetsFolder %>/css/*.css',
+				'<%= buildFolder %>/<%= assetsFolder %>/js/*.js',
+				'<%= buildFolder %>/*.html'
 			]
 		},
 		options: {
 			watchTask: true,
-			server: './'
+			server: './<%= buildFolder %>'
 		}
 	}
 };

@@ -1,5 +1,17 @@
 'use strict';
 module.exports = {
+	jekyll: {
+		files: [
+			'<%= srcFolder %>/**/**/*.{html,yml,md}'
+		],
+		tasks: [
+			'replace',
+			'jekyll',
+			'css:dev',
+			'js:dev',
+			'images:dev'
+		]
+	},
 	css: {
 		files: [
 			'<%= assetsFolder %>/sass/**/**/*.scss'
@@ -18,25 +30,6 @@ module.exports = {
 		tasks: [
 			'jshint',
 			'concat'
-		]
-	},
-	// html: {
-	// 	files: [
-	// 		'*.html',
-	// 	],
-	// 	tasks: [
-	// 		'replace'
-	// 	]
-	// },
-
-	site: {
-		files: [
-			'<%= siteFolder %>/**/**/*.hbs',
-			'<%= siteFolder %>/**/**/*.json'
-		],
-		tasks: [
-			'assemble:site',
-			'replace'
 		]
 	},
 	todo: {

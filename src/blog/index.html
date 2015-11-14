@@ -1,0 +1,59 @@
+---
+title: Articles for front-end devs
+class: s-blog
+layout: master
+---
+
+<header class="c-hero">
+	<div class="c-hero__row o-section o-wrap o-wrap--x-large">
+		<div class="c-hero__content">
+			<h1 class="c-hero__heading">Articles for <span class="u-highlight-text-neutral">front-end devs</span></h1>
+
+			<div class="c-hero__description u-intro">
+				<p>Articles on web performance, responsive web design and more</p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="o-section">
+	<section class="c-listing-wrap">
+		{% for post in site.posts %}
+			{% assign author = site.data.authors[post.author] %}
+			<article class="o-wrap o-wrap--large c-listing" itemscope itemtype="http://schema.org/Blog">
+				<a href="{{ post.url | prepend: site.baseurl }}" class="c-listing__link" itemprop="url">
+					<ul class="c-listing__meta-data">
+						<li class="c-listing__meta-data__item">
+							<time datetime="{{ post.date | date: '%Y-%m-%d%T' }}" pubdate="pubdate">
+								{% assign d = post.date | date: "%-d" %}
+								{% case d %}
+									{% when '1' or '21' or '31' %}{{ d }}<sup>st</sup>
+									{% when '2' or '22' %}{{ d }}<sup>nd</sup>
+									{% when '3' or '23' %}{{ d }}<sup>rd</sup>
+									{% else %}{{ d }}<sup>th</sup>
+								{% endcase %}
+								{{ post.date | date: "%b %Y" }}
+							</time>
+							<meta itemprop="dateCreated" content="{{ post.date | date: '%Y-%m-%d' }}">
+						</li>
+						<li class="c-listing__meta-data__item" itemprop="author">{{ author.name }}</li>
+						<li class="c-listing__meta-data__item c-listing__meta-data__item--visited u-hide-mobile">
+							<span class="c-listing__visited-text">Seen</span>
+							<span class="c-listing__visited-badge">
+								<svg class="u-icon u-icon--check">
+									<use xlink:href="#icon--check"></use>
+								</svg>
+							</span>
+						</li>
+					</ul>
+
+					<h2 class="c-listing__heading u-gamma" itemprop="name">{{ post.blogTitle }}</h2>
+
+					<div class="c-listing__description">
+						{{ post.exerpt }}
+					</div>
+				</a>
+			</article>
+		{% endfor %}
+	</section>
+</div>

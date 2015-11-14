@@ -1,0 +1,26 @@
+/* ===========================================================
+
+	# Forms - Input
+
+=========================================================== */
+
+.o-input,
+.o-select select,
+.o-textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+.o-input,
+.o-textarea {
+	padding: 1rem;
+}
+
+.o-input-wrap {
+	.o-input {
+		padding-right: 4.2rem;
+	}
+}
