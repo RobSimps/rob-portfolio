@@ -8,18 +8,9 @@
 	.c-hero {
 		background-color: $pri;
 		background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
-		background-position: bottom -10rem right -25rem;
+		background-position: center bottom -7.5rem;
 		background-repeat: no-repeat;
 		background-size: 150%;
-	}
-
-	.c-hero__heading {
-		color: $white;
-	}
-
-	.c-hero__description {
-		color: $white;
-		color: rgba( $white, .85 );
 	}
 
 	&.cssanimations {
@@ -44,8 +35,35 @@
 
 	@include respond-min( $mq-medium ) {
 		.c-hero {
+			background-position: right -20rem bottom -12.5rem;
+			background-size: 125%;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-hero {
 			background-position: right -20rem center;
 			background-size: 80%;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-nav__link--button {
+			color: $pri;
+
+			.u-icon {
+				fill: $pri;
+			}
+		}
+
+		.c-header--colour {
+			.c-nav__link--button {
+				color: $white;
+
+				.u-icon {
+					fill: $white;
+				}
+			}
 		}
 	}
 }

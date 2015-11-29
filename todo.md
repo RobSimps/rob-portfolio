@@ -27,14 +27,14 @@
 -  **todo** `(line 7)`  creat more responisve sized images
 -  **todo** `(line 8)`  handle retina images
 
+## assets/sass/components/header.scss
+
+-  **todo** `(line 25)`  getting overriden
+
 ## assets/sass/components/hero/cover.scss
 
 -  **todo** `(line 7)`  vh unit
--  **todo** `(line 29)`  vh unit
-
-## assets/sass/components/nav.scss
-
--  **todo** `(line 96)`  add when toggle nav
+-  **todo** `(line 16)`  vh unit
 
 ## assets/sass/objects/carousel.scss
 

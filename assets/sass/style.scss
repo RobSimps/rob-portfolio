@@ -41,7 +41,8 @@
 		'components/dribbble-shots.scss';
 
 @import 'components/hero/base.scss',
-		'components/hero/cover.scss';
+		'components/hero/cover.scss',
+		'components/hero/two-col.scss';
 
 @import 'components/case-studies/card.scss',
 		'components/case-studies/section/section.scss',
@@ -50,7 +51,6 @@
 		'components/case-studies/section/figure.scss',
 		'components/case-studies/section/grid.scss',
 		'components/case-studies/section/feat-img.scss',
-		'components/case-studies/page-nav.scss',
 		'components/case-studies/colours.scss',
 		'components/case-studies/typography.scss';
 
@@ -58,8 +58,7 @@
 
 @import 'components/case-studies/adspy/card.scss',
 		'components/case-studies/adspy/base.scss',
-		'components/case-studies/adspy/page-heading.scss',
-		'components/case-studies/adspy/page-nav.scss',
+		'components/case-studies/adspy/hero.scss',
 		'components/case-studies/adspy/style-tiles.scss',
 		'components/case-studies/adspy/logo.scss',
 		'components/case-studies/adspy/colours.scss',

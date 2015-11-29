@@ -6,6 +6,24 @@
 
 .s-blog {
 	.c-hero {
-		// background-color: $purple-1;
+		min-height: 0;
+
+		.o-section {
+			padding-bottom: 0;
+		}
+	}
+
+	@include respond-min( $mq-medium ) {
+		.c-hero {
+			.u-highlight-text {
+				display: block;
+			}
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-hero__figure {
+			padding-left: 5%;
+		}
 	}
 }

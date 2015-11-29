@@ -1,0 +1,25 @@
+/* ===========================================================
+
+	# Hero - Two Col
+
+=========================================================== */
+
+@include respond-max( $mq-large ) {
+	.c-hero--two-col {
+		text-align: center;
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-hero--two-col {
+		.c-hero__row {
+			@include clearfix;
+		}
+
+		.c-hero__content,
+		.c-hero__figure {
+			float: left;
+			width: 50%;
+		}
+	}
+}

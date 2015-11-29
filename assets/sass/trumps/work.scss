@@ -13,6 +13,31 @@
 		background-size: 150%;
 	}
 
+	&.cssanimations {
+		.c-hero__heading,
+		.c-hero__meta,
+		.c-hero__description,
+		.c-hero__cta {
+			animation: fade-in-up $speed * 2 backwards;
+		}
+
+		.c-hero__heading {
+		  	animation-delay: .3s;
+		}
+
+		.c-hero__meta {
+		  	animation-delay: .4s;
+		}
+
+		.c-hero__description {
+		  	animation-delay: .5s;
+		}
+
+		.c-hero__cta {
+		  	animation-delay: .6s;
+		}
+	}
+
 	@include respond-min( $mq-small ) {
 		.c-hero {
 			background-size: 125%;
@@ -21,8 +46,35 @@
 
 	@include respond-min( $mq-medium ) {
 		.c-hero {
-			background-position: left -25% center;
+			background-position: right -20rem center;
+			background-size: 110%;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-hero {
+			background-position: right -25% center;
 			background-size: 65%;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-nav__link--button {
+			color: $adspy-pri;
+
+			.u-icon {
+				fill: $adspy-pri;
+			}
+		}
+
+		.c-header--colour {
+			.c-nav__link--button {
+				color: $white;
+
+				.u-icon {
+					fill: $white;
+				}
+			}
 		}
 	}
 }

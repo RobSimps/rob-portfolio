@@ -4,7 +4,7 @@
 
 =========================================================== */
 
-@keyframes navBounceInDown {
+@keyframes nav-bounce-in-down {
 	0%, 60%, 100% {
 		transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
 	}
@@ -14,25 +14,25 @@
 	}
 
 	60% {
-		transform: translateY( 6.4rem );
+		transform: translateY( 0 );
 	}
 
 	100% {
-		transform: translateY( 4.4rem );
+		transform: translateY( -2rem );
 	}
 }
 
-@keyframes navBounceOutUp {
+@keyframes nav-bounce-out-up {
 	0%, 60%, 100% {
 		transition-timing-function: cubic-bezier( 0.215, 0.610, 0.355, 1.000 );
 	}
 
 	0% {
-		transform: translateY( 4.4rem );
+		transform: translateY( -2rem );
 	}
 
 	60% {
-		transform: translateY( 6.4rem );
+		transform: translateY( 0 );
 	}
 
 	100% {
@@ -40,4 +40,145 @@
 	}
 }
 
+@keyframes menu-top-out {
+  	0% {
+    	left: 0;
+    	top: 0;
+    	transform: rotate( 0deg );
+  	}
 
+  	20% {
+    	left: 0;
+    	top: 0;
+    	transform: rotate( 15deg );
+  	}
+
+  	80% {
+    	left: -.25rem;
+    	top: 0;
+    	transform: rotate( -60deg );
+  	}
+
+  	100% {
+    	left: -.25rem;
+    	top: .1rem;
+    	transform: rotate( -45deg );
+  	}
+}
+
+@keyframes menu-bottom-out {
+  	0% {
+    	left: 0;
+    	transform: rotate( 0deg );
+  	}
+
+  	20% {
+    	left: 0;
+    	transform: rotate( -15deg );
+  	}
+
+  	80% {
+    	left: -.25rem;
+    	transform: rotate( 60deg );
+  	}
+
+  	100% {
+    	left: -.25rem;
+    	transform: rotate( 45deg );
+  	}
+}
+
+
+@keyframes menu-top-in {
+  	0% {
+  		bottom: 0;
+    	left: -.25rem;
+    	transform: rotate( -45deg );
+  	}
+
+  	20% {
+  		bottom: 0;
+    	left: -.25rem;
+    	transform: rotate( -60deg );
+  	}
+
+  	80% {
+  		bottom: 0;
+    	left: 0;
+    	transform: rotate( 15deg );
+  	}
+
+  	100% {
+  		bottom: .1rem;
+    	left: 0;
+    	transform: rotate( 0deg );
+  	}
+}
+
+@keyframes menu-bottom-in {
+  	0% {
+    	left: -.25rem;
+    	transform: rotate( 45deg );
+  	}
+
+  	20% {
+  		bottom: 0;
+    	left: -.25rem;
+    	transform: rotate( 60deg );
+  	}
+
+  	80% {
+  		bottom: 0;
+    	left: 0;
+    	transform: rotate( -15deg );
+  	}
+
+  	100% {
+    	left: 0;
+    	transform: rotate( 0deg );
+  	}
+}
+
+@keyframes menu-middle-in {
+  	0% {
+    	left: 1.8rem;
+    	width: 0;
+  	}
+
+  	40% {
+    	left: 2rem;
+    	width: 0;
+  	}
+
+  	80% {
+    	left: -.3rem;
+    	width: 1.8rem;
+  	}
+
+  	100% {
+    	left: 0;
+    	width: 1.8rem;
+  	}
+}
+
+@keyframes menu-middle-out {
+  	0% {
+    	left: 0;
+    	width: 1.8rem;
+  	}
+
+  	20% {
+    	left: -.3rem;
+    	width: 2.1rem;
+  	}
+
+  	40% {
+    	left: 2rem;
+    	width: 0;
+  	}
+
+  	100% {
+    	left: 1.8rem;
+    	width: 0;
+  	}
+}

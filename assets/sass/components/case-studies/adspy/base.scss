@@ -5,9 +5,119 @@
 =========================================================== */
 
 .s-case-study-adspy {
+	.c-hero {
+		background-color: $adspy-pri;
+		background-image: url( '#{$images}/case-studies/adspy/city-background.svg');
+		background-position: center bottom;
+		background-repeat: repeat-x;
+	}
+
 	.c-case-study {
 		.u-highlight-text {
 			color: $adspy-pri;
+		}
+	}
+
+	&.cssanimations {
+		// .c-hero__heading,
+		// .c-hero__meta,
+		// .c-hero__description,
+		// .c-hero__cta {
+		// 	animation: fade-in-up $speed * 2 backwards;
+		// }
+
+		// .c-hero__heading {
+		//   	animation-delay: .3s;
+		// }
+
+		// .c-hero__meta {
+		//   	animation-delay: .4s;
+		// }
+
+		// .c-hero__description {
+		//   	animation-delay: .5s;
+		// }
+
+		// .c-hero__cta {
+		//   	animation-delay: .6s;
+		// }
+		.c-hero__figure {
+			position: relative;
+
+			img {
+				animation: slide-in-down $speed $speed / 2 $timing-function-3 both;
+				position: relative;
+				transform: translateY( -30rem );
+				z-index: 1;
+			}
+
+			&:after {
+				animation: shadow-scale $speed $speed / 2 $timing-function-3 both;
+				content: '';
+				position: absolute;
+				bottom: -16.5rem;
+				left: 50%;
+				width: 32rem;
+				height: 3rem;
+				border-radius: 100%;
+				background: #E5E5E5;
+				margin-left: -15rem;
+				transform: scale( .4 );
+			}
+		}
+
+		.c-hero__content {
+			animation: jump-up $speed * 1.25 $speed * 1.5;
+		}
+	}
+
+	@keyframes slide-in-down {
+		0% {
+			transform: translateY( -30rem );
+		}
+		100% {
+			transform: translateY( 0 );
+		}
+	}
+
+	@keyframes jump-up {
+		0% {
+			transform: translateY( 0 );
+		}
+		30% {
+			transform: translateY( -5rem );
+		}
+		100% {
+			transform: translateY( 0 );
+		}
+	}
+
+	@-webkit-keyframes shadow-scale {
+		0% {
+			transform: scale( .4 );
+		}
+		100% {
+			transform: scale( 1 );
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-nav__link--button {
+			color: $adspy-pri;
+
+			.u-icon {
+				fill: $adspy-pri;
+			}
+		}
+
+		.c-header--colour {
+			.c-nav__link--button {
+				color: $white;
+
+				.u-icon {
+					fill: $white;
+				}
+			}
 		}
 	}
 }

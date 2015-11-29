@@ -13,7 +13,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	padding-top: 7rem;
+	// padding-top: 7rem;
 }
 
 .o-page__content {
@@ -22,8 +22,8 @@ html {
 	width: 100%;
 }
 
-@include respond-min( $mq-large ) {
-	.o-page {
-		padding-top: 8.8rem;
-	}
-}
+// @include respond-min( $mq-large ) {
+// 	.o-page {
+// 		padding-top: 8.8rem;
+// 	}
+// }

@@ -5,27 +5,28 @@
 =========================================================== */
 
 .c-footer {
-	background: $pri;
-	background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
-	background-repeat: no-repeat;
-	transition: background-color $speed * 2 ease;
+	// background: $pri;
+	// background-image: url( '#{$images}/case-studies/geckotree/geckotree-logo.svg');
+	// background-repeat: no-repeat;
+	// transition: background-color $speed * 2 ease;
 
-	&.is-twitter {
-		background-color: $twitter;
-	}
+	// &.is-twitter {
+	// 	background-color: $twitter;
+	// }
 
-	&.is-dribbble {
-		background-color: $dribbble;
-	}
+	// &.is-dribbble {
+	// 	background-color: $dribbble;
+	// }
 
-	&.is-instagram {
-		background-color: $instagram;
-	}
+	// &.is-instagram {
+	// 	background-color: $instagram;
+	// }
+	text-align: center;
 }
 
-.c-footer__heading {
-	color: $white;
-}
+// .c-footer__heading {
+// 	color: $white;
+// }
 
 .c-footer__social {
 	list-style: none;
@@ -52,11 +53,11 @@
 	width: 5.8rem;
 }
 
-@include respond-min-max( $mq-small, $mq-large ) {
-	.c-footer {
-		background-size: 110%;
-	}
-}
+// @include respond-min-max( $mq-small, $mq-large ) {
+// 	.c-footer {
+// 		background-size: 110%;
+// 	}
+// }
 
 @include respond-min( $mq-medium ) {
 	.c-footer__social {
@@ -74,10 +75,10 @@
 }
 
 @include respond-max( $mq-large ) {
-	.c-footer {
-		background-position: center;
-		text-align: center;
-	}
+	// .c-footer {
+	// 	background-position: center;
+	// 	text-align: center;
+	// }
 
 	.c-footer__social {
 		margin-top: $line-height * 1.5;
@@ -85,24 +86,24 @@
 }
 
 @include respond-min( $mq-large ) {
-	.c-footer {
-		background-position: left -25% center;
-		background-size: 50%;
-		position: relative;
+	// .c-footer {
+	// 	background-position: left -25% center;
+	// 	background-size: 50%;
+	// 	position: relative;
 
-		.o-section {
-			@include clearfix;
-			padding-bottom: $padding-large;
-			padding-top: $padding-large;
-		}
-	}
+	// 	.o-section {
+	// 		@include clearfix;
+	// 		padding-bottom: $padding-large + 2rem;
+	// 		padding-top: $padding-large + 2rem;
+	// 	}
+	// }
 
-	.c-footer__planner {
-		float: left;
-	}
+	// .c-footer__planner {
+	// 	float: left;
+	// }
 
 	.c-footer__social {
-		float: right;
+		// float: right;
 		margin-top: .7rem;
 	}
 
@@ -113,26 +114,27 @@
 		transform: translateY( .5rem );
 	}
 
-	.no-touch {
-		margin-bottom: 306px;
+	// .no-touch {
+	// 	margin-bottom: 284px;
 
-		.c-footer {
-			bottom: 0;
-			position: fixed;
-			width: 100%;
-			z-index: -1;
-		}
+	// 	.c-footer {
+	// 		bottom: 0;
+	// 		position: fixed;
+	// 		width: 100%;
+	// 		z-index: -1;
+	// 	}
 
-		&.s-home {
-			margin-bottom: 0;
-		}
-	}
+	// 	&.s-home,
+	// 	&.s-planner {
+	// 		margin-bottom: 0;
+	// 	}
+	// }
 }
 
 @include respond-min( $mq-x-large ) {
-	.c-footer__heading {
-		margin-right: 4rem;
-	}
+	// .c-footer__heading {
+	// 	margin-right: 4rem;
+	// }
 
 	.c-footer__social__item {
 		margin: 0 2rem;

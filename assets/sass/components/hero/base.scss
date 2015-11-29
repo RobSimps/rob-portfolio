@@ -5,6 +5,7 @@
 =========================================================== */
 
 .c-hero {
+	padding-top: 7rem;
 	width: 100%;
 }
 
@@ -20,4 +21,26 @@
 
 .c-hero__cta {
 	margin-top: $line-height * 2;
+}
+
+.c-hero--neutral {
+	.c-hero__heading {
+		color: $white;
+	}
+
+	.c-hero__mata {
+		color: $text-colour;
+	}
+
+	.c-hero__description {
+		color: $white;
+		color: rgba( $white, .85 );
+	}
+}
+
+@include respond-min( $mq-large ) {
+	.c-hero {
+		min-height: 65rem;
+		padding-top: 8.8rem;
+	}
 }

@@ -1,0 +1,43 @@
+/* ===========================================================
+
+	# AdSpy - Page Heading
+
+=========================================================== */
+
+.s-case-study-adspy {
+	.c-hero__figure {
+		padding-top: $padding-small;
+		text-align: center;
+
+		img {
+			margin-bottom: -$padding-medium * 1.5;
+		}
+	}
+
+	.c-case-study {
+		padding-top: $padding-medium * 1.5;
+	}
+
+	@include respond-min( $mq-medium ) {
+		.c-hero__figure {
+			img {
+				margin-bottom: -$padding-large * 1.5;
+			}
+		}
+
+		.c-case-study {
+			padding-top: $padding-large * 1.5;
+		}
+	}
+
+	@include respond-min( $mq-large ) {
+		.c-hero__figure {
+			padding-top: 0;
+
+			img {
+				margin-bottom: -$padding-large * 2;
+				width: 40rem;
+			}
+		}
+	}
+}

@@ -30,7 +30,7 @@ $pri-light:			#DDF0E3;
 $white: 			#FFFFFF;
 $black: 			#000000;
 
-$light-1:			#FAF8F5;
+// $light-1:			#FAF8F5;
 $light-2:			#F2F0ED;
 $light-3:			#EDEBE6;
 $dark-1:			#2D2D2D;
@@ -83,7 +83,7 @@ $type-scale-large:		1.200;
 
 $heading-colour:		$dark-1;
 $text-colour:			$dark-2;
-$background-colour:		$dark-1;
+$background-colour:		$light-1;
 $border-colour:			$light-3;
 $link-colour:			$pri;
 $link-colour-hover:		$sec;
@@ -92,11 +92,11 @@ $highlight-colour:		lighten( $pri, 20 );
 
 $error:					$red-1;
 $success:				$green-1;
-$disabled:				$light-1;
+$disabled:				$light-3;
 
-$padding-small:			6rem;
-$padding-medium:		9rem;
-$padding-large:			12rem;
+$padding-small:			4rem;
+$padding-medium:		6rem;
+$padding-large:			8rem;
 $padding-x-large:		16rem;
 
 $border-width: 			.2rem;
@@ -117,6 +117,10 @@ $active-scale-medium:	scale( .95 );
 
 $timing-function-1:		cubic-bezier( .2, 1, .3, 1 );
 $timing-function-2:		cubic-bezier( 0.165, 0.84, 0.44, 1 );
+$timing-function-3:		cubic-bezier( .28, .5, .79, .41 );
+
+$z-header:				10;
+$z-button-text:			5;
 
 
 

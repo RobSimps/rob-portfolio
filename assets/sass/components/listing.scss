@@ -18,14 +18,31 @@
 
 	&:hover,
 	&:focus {
-		background-color: rgba( $sec, .15 );
+		background-color: $sec;
 
 		.u-highlight-text {
-			color: $sec;
+			color: $text-colour;
+		}
+
+		.c-listing__meta-data {
+			color: $white;
 		}
 
 		.c-listing__visited-badge {
-			background: $sec;
+			background: $white;
+
+			.u-icon {
+				fill: $sec;
+			}
+		}
+
+		.c-listing__heading {
+			color: $white;
+		}
+
+		.c-listing__description {
+			color: $white;
+			color: rgba( $white, .75 );
 		}
 	}
 
@@ -42,6 +59,7 @@
 	color: $dark-3;
 	list-style: none;
 	line-height: 1;
+	transition: color $speed ease;
 }
 
 .c-listing__meta-data__item {
@@ -50,7 +68,6 @@
 	font-weight: $bold;
 	line-height: 1;
 	margin: 0 0 $line-height 0;
-	transition: color $speed ease;
 
 	& + & {
 		margin-left: $padding-small / 4;
@@ -68,12 +85,22 @@
 
 	.u-icon {
 		@include icon( $white, 1rem, 1rem );
+		transition: fill $speed ease;
 	}
 }
 
 .c-listing__heading {
 	margin-top: 0;
 	padding-top: 0;
+	transition: color $speed ease;
+
+	.u-highlight-text {
+		transition: color $speed ease;
+	}
+}
+
+.c-listing__description {
+	transition: color $speed ease;
 }
 
 @include respond-max( $mq-small ) {
