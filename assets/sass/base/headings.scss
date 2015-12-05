@@ -84,26 +84,30 @@ h2,
 h3,
 .u-gamma {
 	@include heading-font-size( $gamma-small );
+	line-height: 1.3;
 }
 
 h4,
 .u-delta {
 	@include heading-font-size( $delta-small );
+	line-height: 1.3;
 }
 
 h5,
 .u-epsilon {
 	@include heading-font-size( $epsilon-small );
+	line-height: 1.3;
 }
 
 h6,
 .u-zeta {
 	@include heading-font-size( $zeta-small );
+	line-height: 1.3;
 }
 
 .u-intro {
 	font-size: $intro-small;
-	line-height: 1.3;
+	line-height: $line-height;
 }
 
 caption,
